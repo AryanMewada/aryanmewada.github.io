@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aryan Mewada Studios – Lightweight Software for Low End PCs</title>
+
+    <meta name="description" content="Aryan Mewada Studios builds lightweight Windows software for low end PCs. Download AnyVidWall – a lag-free live wallpaper app for Windows 10/11.">
+    <meta name="keywords" content="low end pc software, lightweight windows apps, live wallpaper for low end pc, AnyVidWall download">
+    <meta name="author" content="Aryan Mewada">
+
+    <meta property="og:title" content="Aryan Mewada Studios – Software for Low End PCs">
+    <meta property="og:description" content="Download lightweight and lag-free Windows software designed for low end and older PCs.">
+    <meta property="og:type" content="website">
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root { --primary:#3b82f6; --secondary:#6366f1; --bg:#0b1120; --card:#151c2f; --muted:#94a3b8; }
+        * { margin:0; padding:0; box-sizing:border-box; font-family:'Plus Jakarta Sans',sans-serif; }
+        body { background:var(--bg); color:white; }
+
+        nav {
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:20px 8%;
+            position:sticky;
+            top:0;
+            background:rgba(11,17,32,0.9);
+            backdrop-filter:blur(10px);
+            border-bottom:1px solid rgba(255,255,255,0.05);
+        }
+        .logo { font-size:1.5rem; font-weight:800; color:white; text-decoration:none; }
+        .logo span { color:var(--primary); }
+        nav a { color:var(--muted); text-decoration:none; margin-left:25px; font-weight:600; }
+        nav a:hover { color:white; }
+
+        .hero {
+            text-align:center;
+            padding:120px 8%;
+            background:radial-gradient(circle at top right,#1e293b,#0b1120);
+        }
+        .hero h1 { font-size:clamp(2.5rem,5vw,4rem); font-weight:800; }
+        .hero span {
+            background:linear-gradient(to right,var(--primary),var(--secondary));
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+        }
+        .hero p { color:var(--muted); margin-top:20px; font-size:1.1rem; }
+
+        .section { padding:80px 8%; max-width:1100px; margin:auto; }
+        .section h2 { font-size:2rem; margin-bottom:30px; font-weight:800; }
+
+        .grid {
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+            gap:30px;
+        }
+
+        .card {
+            background:var(--card);
+            padding:40px;
+            border-radius:22px;
+            border:1px solid rgba(255,255,255,0.05);
+            transition:0.3s;
+            text-decoration:none;
+            color:white;
+        }
+        .card:hover {
+            transform:translateY(-8px);
+            border-color:var(--primary);
+        }
+        .card img {
+            width:70px;
+            height:70px;
+            border-radius:18px;
+            margin-bottom:20px;
+        }
+
+        footer {
+            text-align:center;
+            padding:60px 8%;
+            border-top:1px solid rgba(255,255,255,0.05);
+            color:var(--muted);
+            font-size:0.95rem;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html" class="logo">ARYAN<span>MEWADA</span></a>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="AnyVidWall.html">AnyVidWall</a>
+        <a href="Support-Us.html" style="color:#fbbf24;">💛 Support</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>High Performance Software<br><span>For Low End PCs</span></h1>
+    <p>
+        Lightweight, lag-free Windows applications built for older and low-spec computers.
+    </p>
+</section>
+
+<section class="section">
+    <h2>Featured Application</h2>
+    <div class="grid">
+        <a href="AnyVidWall.html" class="card">
+            <img src="https://drive.google.com/thumbnail?id=1DeFNeqGeGXECkTmuTfdtmGSB-SuDojMU&sz=w200" alt="AnyVidWall Icon">
+            <h3>AnyVidWall</h3>
+            <p style="color:var(--muted); margin-top:10px;">
+                A lightweight live wallpaper software that lets you use any video as your desktop wallpaper on Windows 10/11 without lag.
+            </p>
+            <p style="color:var(--primary); font-weight:700; margin-top:20px;">
+                View Details →
+            </p>
+        </a>
+    </div>
+</section>
+
+<footer>
+    © 2026 Aryan Mewada Studios • All Rights Reserved
+</footer>
+
+</body>
+</html>
