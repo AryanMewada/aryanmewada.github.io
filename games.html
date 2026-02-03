@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="logo.png">
+
+<title>Games – Aryan Mewada Studios</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+:root{--primary:#3b82f6;--secondary:#6366f1;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Plus Jakarta Sans',sans-serif;}
+
+body{
+color:white;
+background:linear-gradient(270deg,#0b1120,#0f172a,#0b1120);
+background-size:600% 600%;
+animation:bgMove 14s ease infinite;
+}
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* NAVBAR */
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:rgba(11,17,32,0.7);
+backdrop-filter:blur(12px);
+position:sticky;
+top:0;
+z-index:1000;
+}
+.logo{font-weight:800;color:white;text-decoration:none;}
+.logo span{color:var(--primary);}
+nav a{
+margin-left:25px;
+color:#94a3b8;
+text-decoration:none;
+font-weight:600;
+}
+nav a:hover{color:white;}
+
+/* HERO */
+.hero{
+text-align:center;
+padding:100px 8% 60px;
+}
+.hero h1{
+font-size:clamp(2.2rem,5vw,3.5rem);
+font-weight:800;
+}
+.hero span{
+background:linear-gradient(to right,#3b82f6,#6366f1);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+.hero p{
+color:#94a3b8;
+margin-top:15px;
+}
+
+/* SECTION */
+.section{
+max-width:1100px;
+margin:auto;
+padding:60px 8%;
+}
+
+/* GAME GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+/* GAME CARD */
+.card{
+background:rgba(21,28,47,0.6);
+backdrop-filter:blur(20px);
+border-radius:24px;
+padding:30px;
+border:1px solid rgba(255,255,255,0.05);
+text-decoration:none;
+color:white;
+transition:.3s;
+}
+.card:hover{
+transform:translateY(-6px);
+border-color:#3b82f6;
+}
+.card img{
+width:80px;
+border-radius:18px;
+margin-bottom:15px;
+}
+
+/* COMING SOON STYLE */
+.soon{
+opacity:.6;
+}
+
+/* AD ZONE */
+.ad-zone{
+max-width:970px;
+margin:40px auto;
+text-align:center;
+border:1px dashed #334155;
+border-radius:12px;
+padding:10px;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:60px 8%;
+border-top:1px solid rgba(255,255,255,0.05);
+color:#94a3b8;
+}
+footer a{
+color:#94a3b8;
+margin-left:10px;
+text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="index.html" class="logo">ARYAN<span>MEWADA</span></a>
+<div>
+<a href="index.html">Home</a>
+<a href="apps.html">Apps</a>
+<a href="games.html" style="color:white;">Games</a>
+<a href="Support-Us.html">💛 Support</a>
+</div>
+</nav>
+
+<section class="hero">
+<h1>Lightweight PC<br><span>Games Collection</span></h1>
+<p>Optimized games designed for smooth performance on low-end PCs.</p>
+</section>
+
+<!-- 💰 TOP AD -->
+<div class="ad-zone">
+<script>
+atOptions={'key':'6ed80642fd85ad56ae99b2d088d76719','format':'iframe','height':90,'width':728,'params':{}};
+</script>
+<script src="https://www.highperformanceformat.com/6ed80642fd85ad56ae99b2d088d76719/invoke.js"></script>
+</div>
+
+<section class="section">
+
+<h2>🎮 Featured Games</h2>
+
+<div class="grid">
+
+<!-- FUTURE GAME CARD -->
+<a class="card soon">
+<img src="logo.png">
+<h3>Coming Soon</h3>
+<p style="color:#94a3b8;">New lightweight games will appear here.</p>
+</a>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Aryan Mewada Studios
+<a href="privacy-policy.html">Privacy Policy</a>
+<a href="terms.html">Terms</a>
+</footer>
+
+</body>
+</html>
