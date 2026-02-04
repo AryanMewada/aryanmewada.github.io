@@ -1,155 +1,50 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="google-site-verification" content="2s6oPnDPBbv4nW5coYzA1BErjh4J5mLdLkfOgUBebcU" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <link rel="icon" type="image/png" href="logo.png">
 
-<title>Aryan Mewada Studios – Lightweight Software for Low End PCs</title>
+<title>Aryan Mewada Studio – PC Apps & Games for Windows</title>
 
-<meta name="description" content="Aryan Mewada Studios builds lightweight Windows software for low end PCs. Discover fast and optimized apps designed for performance.">
+<meta name="description" content="Aryan Mewada Studio creates PC apps and games for Windows. Download lightweight software designed for smooth performance on all PCs.">
+
+<meta name="keywords" content="Aryan Mewada Studio, PC apps, PC games, Windows apps, Windows games, lightweight pc software">
+
+<meta name="author" content="Aryan Mewada">
 
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
-
 <style>
 :root{--primary:#3b82f6;--secondary:#6366f1;}
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Plus Jakarta Sans',sans-serif;}
-
-body{
-color:white;
-background:linear-gradient(270deg,#0b1120,#0f172a,#0b1120);
-background-size:600% 600%;
-animation:bgMove 14s ease infinite;
-}
-@keyframes bgMove{
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
-}
-
-/* NAV */
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 8%;
-background:rgba(11,17,32,0.7);
-backdrop-filter:blur(12px);
-position:sticky;top:0;z-index:1000;
-}
+body{color:white;background:linear-gradient(270deg,#0b1120,#0f172a,#0b1120);background-size:600% 600%;animation:bgMove 14s ease infinite;}
+@keyframes bgMove{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 8%;background:rgba(11,17,32,0.7);backdrop-filter:blur(12px);position:sticky;top:0;z-index:1000;}
 .logo{font-weight:800;color:white;text-decoration:none;}
 .logo span{color:var(--primary);}
 nav a{margin-left:25px;color:#94a3b8;text-decoration:none;font-weight:600;}
 nav a:hover{color:white;}
-
-/* HERO */
-.hero{
-text-align:center;
-padding:120px 8%;
-}
-.hero h1{
-font-size:clamp(2.5rem,5vw,4rem);
-font-weight:800;
-}
-.hero span{
-background:linear-gradient(to right,#3b82f6,#6366f1);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
+.hero{text-align:center;padding:120px 8%;}
+.hero h1{font-size:clamp(2.5rem,5vw,4rem);font-weight:800;}
+.hero span{background:linear-gradient(to right,#3b82f6,#6366f1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
 .hero p{color:#94a3b8;margin-top:20px;font-size:1.1rem;}
-
-/* TRUST STRIP */
-.trust{
-display:flex;
-justify-content:center;
-gap:15px;
-flex-wrap:wrap;
-margin-top:30px;
-}
-.badge{
-background:#020617;
-border:1px solid rgba(255,255,255,0.08);
-padding:10px 18px;
-border-radius:999px;
-font-size:13px;
-color:#cbd5e1;
-}
-
-/* SECTIONS */
-.section{
-max-width:1100px;
-margin:auto;
-padding:80px 8%;
-}
-
-/* FEATURE CARD */
-.feature{
-background:rgba(21,28,47,0.6);
-backdrop-filter:blur(20px);
-border-radius:28px;
-padding:40px;
-border:1px solid rgba(255,255,255,0.05);
-display:flex;
-align-items:center;
-gap:30px;
-flex-wrap:wrap;
-}
-.feature img{
-width:100px;
-border-radius:22px;
-}
-.feature a{
-margin-top:10px;
-display:inline-block;
-padding:12px 25px;
-background:linear-gradient(to right,#3b82f6,#6366f1);
-border-radius:999px;
-color:white;
-text-decoration:none;
-font-weight:700;
-}
-
-/* GRID */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-margin-top:30px;
-}
-.card{
-background:rgba(21,28,47,0.6);
-backdrop-filter:blur(20px);
-border-radius:24px;
-padding:30px;
-border:1px solid rgba(255,255,255,0.05);
-text-decoration:none;
-color:white;
-transition:.3s;
-}
+.trust{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin-top:30px;}
+.badge{background:#020617;border:1px solid rgba(255,255,255,0.08);padding:10px 18px;border-radius:999px;font-size:13px;color:#cbd5e1;}
+.section{max-width:1100px;margin:auto;padding:80px 8%;}
+.feature{background:rgba(21,28,47,0.6);backdrop-filter:blur(20px);border-radius:28px;padding:40px;border:1px solid rgba(255,255,255,0.05);display:flex;align-items:center;gap:30px;flex-wrap:wrap;}
+.feature img{width:100px;border-radius:22px;}
+.feature a{margin-top:10px;display:inline-block;padding:12px 25px;background:linear-gradient(to right,#3b82f6,#6366f1);border-radius:999px;color:white;text-decoration:none;font-weight:700;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;margin-top:30px;}
+.card{background:rgba(21,28,47,0.6);backdrop-filter:blur(20px);border-radius:24px;padding:30px;border:1px solid rgba(255,255,255,0.05);text-decoration:none;color:white;transition:.3s;}
 .card:hover{transform:translateY(-6px);border-color:#3b82f6;}
 .card img{width:70px;border-radius:18px;margin-bottom:10px;}
-
-/* AD ZONE */
-.ad-zone{
-max-width:970px;
-margin:50px auto;
-text-align:center;
-border:1px dashed #334155;
-border-radius:12px;
-padding:10px;
-}
-
-footer{
-text-align:center;
-padding:60px 8%;
-border-top:1px solid rgba(255,255,255,0.05);
-}
+.ad-zone{max-width:970px;margin:50px auto;text-align:center;border:1px dashed #334155;border-radius:12px;padding:10px;}
+footer{text-align:center;padding:60px 8%;border-top:1px solid rgba(255,255,255,0.05);}
 footer a{color:#94a3b8;margin-left:10px;text-decoration:none;}
 </style>
 </head>
-
 <body>
 
 <nav>
@@ -163,8 +58,8 @@ footer a{color:#94a3b8;margin-left:10px;text-decoration:none;}
 </nav>
 
 <section class="hero">
-<h1>High Performance Software<br><span>For Low End PCs</span></h1>
-<p>Lightweight, fast and optimized Windows applications.</p>
+<h1>Aryan Mewada Studio</h1>
+<p>PC Apps & Games for Windows – lightweight and optimized software.</p>
 
 <div class="trust">
 <div class="badge">✔ Lightweight Apps</div>
@@ -174,7 +69,6 @@ footer a{color:#94a3b8;margin-left:10px;text-decoration:none;}
 </div>
 </section>
 
-<!-- 💰 TOP AD -->
 <div class="ad-zone">
 <script>
 atOptions={'key':'6ed80642fd85ad56ae99b2d088d76719','format':'iframe','height':90,'width':728,'params':{}};
@@ -189,9 +83,7 @@ atOptions={'key':'6ed80642fd85ad56ae99b2d088d76719','format':'iframe','height':9
 <img src="https://drive.google.com/thumbnail?id=1DeFNeqGeGXECkTmuTfdtmGSB-SuDojMU&sz=w200">
 <div>
 <h3>AnyVidWall</h3>
-<p style="color:#94a3b8;margin-top:8px;">
-Use any video as wallpaper — optimized for low-end PCs.
-</p>
+<p style="color:#94a3b8;margin-top:8px;">Use any video as wallpaper — optimized for Windows PCs.</p>
 <a href="AnyVidWall.html">Open App Page</a>
 </div>
 </div>
@@ -201,13 +93,26 @@ Use any video as wallpaper — optimized for low-end PCs.
 <h2>Our Apps</h2>
 
 <div class="grid">
-
 <a href="AnyVidWall.html" class="card">
 <img src="https://drive.google.com/thumbnail?id=1DeFNeqGeGXECkTmuTfdtmGSB-SuDojMU&sz=w200">
 <h3>AnyVidWall</h3>
 <p style="color:#94a3b8;">Live wallpaper for Windows</p>
 </a>
+</div>
+</section>
 
+</section>
+
+<!-- ✅ ABOUT SECTION RESTORED -->
+<section class="section">
+<div class="about">
+<h2>About Aryan Mewada Studios</h2>
+<p>
+Aryan Mewada Studios focuses on building lightweight Windows apps and tools
+that run smoothly on all PCs. Our goal is to create fast, simple and optimized
+software without heavy system usage — perfect for everyday users, students
+and low-end PC setups.
+</p>
 </div>
 </section>
 
