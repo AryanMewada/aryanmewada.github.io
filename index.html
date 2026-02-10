@@ -1,47 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="google-site-verification" content="2s6oPnDPBbv4nW5coYzA1BErjh4J5mLdLkfOgUBebcU" />
 
-<!-- ⭐ GOOGLE SEARCH CONSOLE VERIFICATION (IMPORTANT) -->
-<meta name="google-site-verification" content="2s6oPnDPBbv4nW5coYzA1BErjh4J5mLdLkfOgUBebcU" />
+    <title>Aryan Mewada Studios – Official Apps & Games</title>
+    
+    <meta name="description" content="Aryan Mewada Studios builds lightweight software and apps for all PCs including low end systems.">
+    <meta name="keywords" content="Aryan Mewada Studio, Aryan Mewada Studio Apps, Aryan Mewada Studio Games, Lightweight Software for PC, Apps For Low End PC, Apps For 2GB RAM PC, Aryan Mewada">
+    
+    <link rel="icon" type="image/png" href="logo.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --bg: #0b1120; /* Deep Blue/Black Background */
+            --surface: #1e293b; /* Card Color */
+            --primary: #3b82f6; /* Blue Accent */
+            --primary-glow: rgba(59, 130, 246, 0.5);
+            --text-main: #ffffff;
+            --text-muted: #94a3b8;
+        }
 
-<title>Aryan Mewada Studios – Official Website</title>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
 
-<meta name="description" content="Official website of Aryan Mewada Studios. Lightweight Windows apps and PC software. New redesign coming soon.">
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
 
-<meta name="keywords" content="Aryan Mewada Studios, pc apps, windows tools for pc, low end pc apps, lightweight pc software">
+        /* NAVBAR */
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            background: rgba(11, 17, 32, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-<meta name="author" content="Aryan Mewada">
+        /* Logo ko gol kar diya hai */
+        nav img { 
+            height: 40px; 
+            width: 40px; /* Width fix ki taaki perfect gol bane */
+            object-fit: cover;
+            border-radius: 50%; /* Circular style */
+        }
+        nav h1 { font-size: 1.3rem; font-weight: 800; letter-spacing: -0.5px; }
 
-<!-- ⭐ LOGO (so Google image show kare) -->
-<link rel="icon" type="image/png" href="logo.png">
-<meta property="og:image" content="https://aryanmewada.github.io/logo.png">
+        /* HERO SECTION (Introduction + Selector) */
+        .hero-section {
+            padding: 80px 20px 40px;
+            text-align: center;
+            background: radial-gradient(circle at center top, rgba(59, 130, 246, 0.15), transparent 70%);
+        }
 
-<style>
-body{
-background:#0b1120;
-color:white;
-font-family:sans-serif;
-text-align:center;
-padding:120px 20px;
-}
-h1{
-font-size:40px;
-}
-p{
-color:#94a3b8;
-margin-top:20px;
-}
-</style>
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto 50px; /* Space below text */
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-desc {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* SELECTOR SWITCH */
+        .selector-container {
+            display: inline-flex;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 6px;
+            border-radius: 100px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            z-index: 10;
+        }
+
+        .selector-container button {
+            background: transparent;
+            border: none;
+            padding: 12px 40px;
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 100px;
+            transition: all 0.3s ease;
+        }
+
+        .selector-container button.active {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 20px var(--primary-glow);
+        }
+
+        .selector-container button:hover:not(.active) {
+            color: white;
+        }
+
+        /* MAIN CONTENT GRID */
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 20px 100px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* CARD DESIGN */
+        .card {
+            background: var(--surface);
+            border-radius: 24px;
+            padding: 40px 30px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+        }
+
+        .card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 22px;
+            margin-bottom: 25px;
+            object-fit: cover;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .card h3 { font-size: 1.4rem; margin-bottom: 10px; }
+        .card p { color: var(--text-muted); font-size: 0.95rem; }
+
+        /* COMING SOON CARD STYLE */
+        .card.dashed {
+            background: transparent;
+            border: 2px dashed rgba(255, 255, 255, 0.1);
+            justify-content: center;
+            min-height: 300px;
+        }
+        
+        .card.dashed:hover {
+            border-color: var(--text-muted);
+            transform: none;
+            cursor: default;
+        }
+
+        .card.dashed h3 { color: var(--text-muted); font-weight: 600; }
+
+        /* FOOTER */
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 60px 20px;
+            text-align: center;
+            background: #080c17;
+        }
+
+        .footer-nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .footer-nav a:hover { color: var(--primary); }
+        .copyright { margin-top: 30px; color: rgba(255, 255, 255, 0.2); font-size: 0.85rem; }
+
+        /* MOBILE TWEAKS */
+        @media (max-width: 600px) {
+            .hero-title { font-size: 1.8rem; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
-
 <body>
 
-<h1>Aryan Mewada Studios</h1>
-<p>🚀 New PRO Website Redesign Coming Soon</p>
+    <nav>
+        <img src="logo.png" alt="Logo">
+        <h1>Aryan Mewada Studios</h1>
+    </nav>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <span class="badge">Performance First</span>
+            <h2 class="hero-title">Software Built for Every PC.</h2>
+            <p class="hero-desc">
+                We are Aryan Mewada Studios. We build high-performance software and games designed to run smoothly on any hardware—from high-end rigs to low-end laptops with 2GB RAM. Our mission is to make technology accessible and fast for everyone.
+            </p>
+        </div>
+
+        <div class="selector-container">
+            <button id="appsBtn" class="active" onclick="toggleSection('apps')">Apps</button>
+            <button id="gamesBtn" onclick="toggleSection('games')">Games</button>
+        </div>
+    </section>
+
+    <main class="content-wrapper">
+        
+        <div id="appsSection" class="grid">
+            
+            <a href="AnyVidWall.html" class="card">
+                <img src="https://github.com/AryanMewada/Resources/raw/main/AnyVidWall.png" alt="AnyVidWall Logo">
+                <h3>AnyVidWall</h3>
+                <p>The ultimate lightweight live wallpaper engine. Bring your desktop to life without slowing down your PC.</p>
+            </a>
+
+            <div class="card dashed">
+                <h3>More Apps Coming Soon</h3>
+                <p>We are working on new tools for you.</p>
+            </div>
+
+        </div>
+
+        <div id="gamesSection" class="grid" style="display: none;">
+            
+            <div class="card dashed">
+                <h3>Games Coming Soon</h3>
+                <p>Get ready for optimized gaming experiences. Stay tuned!</p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-nav">
+            <a href="#">About Us</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms.html">Terms & Conditions</a>
+        </div>
+        <p class="copyright">© 2026 Aryan Mewada Studios. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleSection(type) {
+            const appsSec = document.getElementById("appsSection");
+            const gamesSec = document.getElementById("gamesSection");
+            const appsBtn = document.getElementById("appsBtn");
+            const gamesBtn = document.getElementById("gamesBtn");
+
+            if (type === 'apps') {
+                appsSec.style.display = "grid";
+                gamesSec.style.display = "none";
+                appsBtn.classList.add("active");
+                gamesBtn.classList.remove("active");
+            } else {
+                appsSec.style.display = "none";
+                gamesSec.style.display = "grid";
+                gamesBtn.classList.add("active");
+                appsBtn.classList.remove("active");
+            }
+        }
+    </script>
 
 </body>
 </html>
