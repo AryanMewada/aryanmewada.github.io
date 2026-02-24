@@ -1,52 +1,41 @@
 <div align="center">
 
-# 🌌 Aryan Mewada Studios - Live Wallpaper Engines
-**Ultra-Lightweight, Zero-Lag PC Customization Tools for Low-End Systems**
+# 🚀 Aryan Mewada Studios (BSR)
+**High-Performance Software, Apps & Games for Every PC**
 
 [![Platform: Windows](https://img.shields.io/badge/Platform-Windows%207%2F8%2F10%2F11-blue?style=flat-square)](https://aryanmewada.github.io/)
 [![License: Free](https://img.shields.io/badge/License-100%25%20Free-success?style=flat-square)](https://aryanmewada.github.io/)
-[![Engine: C++ & OpenGL](https://img.shields.io/badge/Engine-C%2B%2B%20%7C%20OpenGL-orange?style=flat-square)](https://aryanmewada.github.io/AnyWebWall.html)
+[![Engine: C++ & OpenGL](https://img.shields.io/badge/Optimized%20For-Low%20End%20PCs-orange?style=flat-square)](https://aryanmewada.github.io/)
 
-If you find these tools helpful, please consider giving this repository a ⭐ **Star**! It helps the project grow.
+We build lightweight, zero-lag software tools and heavily optimized games designed to run smoothly on low-end systems (2GB/4GB RAM). 
 
-[🌐 Visit Official Website](https://aryanmewada.github.io/) • [📥 Download Apps](https://aryanmewada.github.io/) • [🖼️ Wallpaper Gallery](https://aryanmewada.github.io/aww.html)
+If you find our projects helpful, please consider giving this repository a ⭐ **Star**! It helps the studio grow.
+
+[🌐 Official Website](https://aryanmewada.github.io/) • [📥 Download Apps](https://aryanmewada.github.io/) • [🖼️ Wallpaper Gallery](https://aryanmewada.github.io/aww.html)
 
 </div>
 
 ---
 
-## 🚀 The Problem We Solved
-Most live wallpaper software (like Wallpaper Engine) consumes a lot of system resources, causing severe lag and FPS drops on low-end PCs (2GB/4GB RAM) while gaming. 
+## 💻 OUR APPS (Live Wallpaper Engines)
+Most live wallpaper software consumes heavy system resources, causing FPS drops on low-end PCs. We solved this by engineering two ultra-lightweight, high-performance engines:
 
-**Aryan Mewada Studios (BSR)** has engineered two distinct, high-performance engines to bring premium desktop customization to **every PC**, ensuring 0% CPU usage and maximum gaming performance.
-
----
-
-## 1️⃣ AnyVidWall (Video Wallpaper Engine)
+### 1️⃣ AnyVidWall (Video Wallpaper Engine)
 The ultimate free video live wallpaper engine designed specifically for low-end PCs.
-
-* **Smart Gaming Mode:** Automatically pauses background playback when a full-screen application or game (like GTA V or Valorant) is launched.
+* **Smart Gaming Mode:** Automatically pauses background playback when a full-screen game (like GTA V or Valorant) is launched.
 * **Format Support:** Set any MP4, MKV, or AVI video as your permanent desktop background.
 * **Zero Lag:** Extremely low CPU & RAM usage compared to heavy alternatives.
 
 👉 **[Download AnyVidWall](https://aryanmewada.github.io/AnyVidWall.html)**
 
----
-
-## 2️⃣ AnyWebWall (C++ & OpenGL 3D Engine)
-A revolutionary next-gen engine that goes beyond simple videos. It runs exclusive **`.aww`** files to render true 2D and 3D interactive graphics.
-
+### 2️⃣ AnyWebWall (C++ & OpenGL 3D Engine)
+A revolutionary next-gen engine that runs exclusive **`.aww`** files to render true 2D and 3D interactive graphics.
 * **Extreme Optimization:** Built entirely on **C++ and OpenGL**. Consumes exactly **0% CPU** and strictly **20-25 MB RAM**, even when running 3D models.
 * **Exclusive Customization:** Every `.aww` wallpaper comes with a custom settings menu. Tweak 3D model sizes, matrix colors, and physics in real-time.
-* **Interactive Desktop:** Supports cursor-tracking, 3D animations, and real-time coding effects.
 
 👉 **[Download AnyWebWall](https://aryanmewada.github.io/AnyWebWall.html)**
 
----
-
-## 🎨 Exclusive `.aww` Wallpaper Gallery
-Download these lightweight files and open them directly in the AnyWebWall engine.
-
+### 🎨 Exclusive `.aww` Wallpaper Gallery
 | Matrix Rain | Hacker Window | Radar Scanner |
 |:---:|:---:|:---:|
 | <img src="https://github.com/AryanMewada/AWW/raw/main/Matrix%20Rain.gif" width="250"> | <img src="https://github.com/AryanMewada/AWW/raw/main/Hacker%20Window.gif" width="250"> | <img src="https://github.com/AryanMewada/AWW/raw/main/Radar.gif" width="250"> |
@@ -59,8 +48,17 @@ Download these lightweight files and open them directly in the AnyWebWall engine
 
 ---
 
+## 🎮 OUR GAMES (Coming Soon)
+At Aryan Mewada Studios, we don't just stop at software. We are actively working on high-performance gaming experiences built from the ground up for maximum FPS on low-spec hardware.
+
+* **Status:** In Active Development 🛠️
+* **Genre:** TBA
+* Stay tuned for updates!
+
+---
+
 ## 🤝 Support & Feedback
-* Enjoying the apps? **Please Star ⭐ this repository!**
+* Enjoying our work? **Please Star ⭐ this repository!**
 * Have a feature request or found a bug? Feel free to open an issue.
 
 **© 2026 Aryan Mewada Studios (BSR). All rights reserved.**
