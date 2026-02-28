@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="canonical" href="https://aryanmewada.github.io/rubiks-cube.html" />
+
+    <title>Download 3D Rubik's Cube Live Wallpaper for PC (Free) | AnyWebWall</title>
+    
+    <meta name="description" content="Get an interactive 3D Rubik's Cube live wallpaper for your desktop. Built with C++ & OpenGL, it responds to your mouse with 0% CPU and 20MB RAM usage.">
+    
+    <meta name="keywords" content="3D Rubiks Cube Live Wallpaper, Interactive Desktop Wallpaper, 3D PC Background, Rubiks Cube Desktop Widget, OpenGL 3D Wallpaper, AnyWebWall 3D Theme, .aww file download, Zero Lag 3D Wallpaper, C++ Live Wallpaper, Mouse Tracking Wallpaper, Low RAM 3D Wallpaper, BSR Apps, Aryan Mewada Studios, Gaming PC Customization">
+    
+    <meta name="author" content="Aryan Mewada Studios">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="3D Rubik's Cube Live Wallpaper - 0% CPU Usage">
+    <meta property="og:description" content="Make your desktop fully interactive with this lightweight 3D Rubik's Cube wallpaper.">
+    <meta property="og:image" content="https://github.com/AryanMewada/AWW/raw/main/Rubiks%20Cube.gif">
+    
+    <link rel="icon" type="image/png" href="logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1032421976701438"
+     crossorigin="anonymous"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K88700017F"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K88700017F');
+    </script>
+
+    <style>
+        /* Changed Primary Color to a Gaming Red/Orange for Rubik's Cube theme */
+        :root { --bg: #0b1120; --surface: #1e293b; --primary: #ef4444; --primary-hover: #dc2626; --text-main: #ffffff; --text-muted: #94a3b8; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg); color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
+
+        /* NAV BAR */
+        nav { 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 10px 30px; 
+            background: rgba(11, 17, 32, 0.95); backdrop-filter: blur(12px); 
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
+            position: sticky; top: 0; z-index: 1000; 
+        }
+        .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: white; }
+        .nav-brand img { height: 32px; width: 32px; border-radius: 50%; object-fit: cover; }
+        .nav-brand h1 { font-size: 1.15rem; font-weight: 800; letter-spacing: -0.5px; }
+        
+        .nav-links { display: flex; gap: 20px; align-items: center; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: 0.3s; }
+        .nav-links a:hover { color: var(--text-main); }
+        .nav-btn { background: rgba(59, 130, 246, 0.15); color: #60a5fa !important; padding: 6px 16px; border-radius: 100px; border: 1px solid rgba(59, 130, 246, 0.3); }
+        .nav-btn:hover { background: #3b82f6; color: white !important; }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+
+        /* ADVERTISEMENT SPACE */
+        .ad-space { 
+            width: 100%; max-width: 900px; min-height: 90px; 
+            background: rgba(255, 255, 255, 0.02); border: 1px dashed rgba(255, 255, 255, 0.1); 
+            margin: 20px auto 40px; display: flex; align-items: center; justify-content: center; 
+            border-radius: 8px; overflow: hidden; padding: 10px 0;
+        }
+
+        /* LAYOUT */
+        .wallpaper-layout { 
+            display: flex; flex-wrap: wrap; gap: 40px; margin-bottom: 50px; 
+            align-items: flex-start; justify-content: center;
+        }
+        
+        /* PERFECT GALLERY STYLE CARD */
+        .main-gif-card { 
+            width: 100%; max-width: 380px; 
+            background: var(--surface); 
+            border-radius: 20px; 
+            overflow: hidden; 
+            border: 1px solid rgba(255, 255, 255, 0.05); 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .main-gif-card img { 
+            width: 100%; height: 220px; 
+            background-color: #0b1120;
+            object-fit: cover; 
+            display: block; 
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
+        }
+        .main-gif-info {
+            padding: 20px;
+        }
+        .main-gif-info h1 {
+            font-size: 1.4rem; font-weight: 700; color: white; margin-bottom: 5px; line-height: 1.2;
+        }
+        .main-gif-info p {
+            color: var(--primary); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin: 0;
+        }
+        
+        /* WALLPAPER DETAILS (Right Side) */
+        .wallpaper-details { flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: flex-start; padding-top: 5px;}
+        
+        .specs-list { list-style: none; margin-bottom: 30px; background: rgba(255,255,255,0.02); padding: 25px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.05);}
+        .specs-list li { margin-bottom: 12px; color: var(--text-muted); display: flex; align-items: center; gap: 10px; font-size: 1rem; }
+        .specs-list li:last-child { margin-bottom: 0; }
+        .specs-list li strong { color: white; }
+
+        .btn-download { display: inline-flex; align-items: center; justify-content: center; background: var(--primary); color: white; font-size: 1.2rem; font-weight: 700; padding: 18px 40px; border-radius: 100px; text-decoration: none; transition: 0.3s; box-shadow: 0 10px 20px rgba(239, 68, 68, 0.3); text-align: center; }
+        .btn-download:hover { background: var(--primary-hover); transform: translateY(-3px); box-shadow: 0 15px 30px rgba(239, 68, 68, 0.4); }
+
+        .engine-info { 
+            margin-top: 25px; padding: 16px 20px; border-radius: 12px; 
+            background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); 
+            color: #e2e8f0; font-size: 0.95rem; line-height: 1.5;
+        }
+        .engine-info strong { color: #60a5fa; font-size: 1.05rem; display: block; margin-bottom: 4px; }
+        .engine-info a { color: #ffffff; background: #3b82f6; padding: 6px 14px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem; display: inline-block; margin-top: 10px; transition: 0.3s;}
+        .engine-info a:hover { background: #2563eb; }
+
+        .recommended-section { margin-bottom: 50px; }
+        .recommended-section h3 { font-size: 1.5rem; margin-bottom: 25px; border-left: 4px solid var(--primary); padding-left: 15px; }
+        .rec-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .rec-card { background: var(--surface); border-radius: 16px; overflow: hidden; text-decoration: none; transition: transform 0.3s; border: 1px solid rgba(255,255,255,0.05); }
+        .rec-card:hover { transform: translateY(-5px); border-color: var(--primary); }
+        .rec-card img { width: 100%; height: 140px; object-fit: cover; }
+        .rec-info { padding: 15px; }
+        .rec-info h4 { color: white; margin-bottom: 5px; font-size: 1.1rem; }
+        .rec-info p { color: var(--text-muted); font-size: 0.85rem; }
+
+        .seo-paragraph { background: rgba(15, 23, 42, 0.6); padding: 40px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.02); margin-bottom: 50px; }
+        .seo-paragraph h2 { font-size: 1.8rem; margin-bottom: 20px; color: white; }
+        .seo-paragraph p { color: #94a3b8; margin-bottom: 15px; font-size: 1.05rem; line-height: 1.8; }
+        .seo-paragraph strong { color: var(--primary); }
+
+        footer { border-top: 1px solid rgba(255, 255, 255, 0.05); padding: 40px 20px; text-align: center; background: #080c17; margin-top: 40px; }
+        footer a { color: var(--text-muted); text-decoration: none; margin: 0 10px; }
+
+        @media (max-width: 768px) {
+            nav { flex-direction: column; padding: 15px; gap: 15px; }
+            .nav-links { width: 100%; justify-content: center; flex-wrap: wrap; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-brand">
+            <img src="logo.png" alt="Logo">
+            <h1>Aryan Mewada Studios</h1>
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="aww.html">Gallery</a>
+            <a href="AnyWebWall.html" class="nav-btn">Get AnyWebWall</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        
+        <div class="ad-space">
+            <ins class="adsbygoogle"
+                 style="display:block; width:100%;"
+                 data-ad-client="ca-pub-1032421976701438"
+                 data-ad-slot="5645597669"
+                 data-ad-format="horizontal"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <div class="wallpaper-layout">
+            
+            <div class="main-gif-card">
+                <img src="https://github.com/AryanMewada/AWW/raw/main/Rubiks%20Cube.gif" alt="3D Rubik's Cube Live Wallpaper Preview">
+                <div class="main-gif-info">
+                    <h1>3D Rubik's Cube</h1>
+                    <p>Interactive 3D Model</p>
+                </div>
+            </div>
+            
+            <div class="wallpaper-details">
+                <ul class="specs-list">
+                    <li><strong>File Type:</strong> .aww (Interactive 3D)</li>
+                    <li><strong>Technology:</strong> C++ & OpenGL</li>
+                    <li><strong>CPU Usage:</strong> 0% (Optimized for Gaming)</li>
+                    <li><strong>RAM Footprint:</strong> ~20 to 25 MB</li>
+                    <li><strong>Features:</strong> 3D Mouse Interaction</li>
+                </ul>
+                
+                <a href="https://github.com/AryanMewada/AWW/raw/main/Rubiks%20Cube.aww" class="btn-download">Download .aww File</a>
+                
+                <div class="engine-info">
+                    <strong>ℹ️ How to use this file?</strong>
+                    This is an exclusive wallpaper script. To apply this to your desktop, you will need our free wallpaper engine. It will not work without it.
+                    <br>
+                    <a href="AnyWebWall.html">Get AnyWebWall Engine</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="recommended-section">
+            <h3>Recommended Wallpapers</h3>
+            <div class="rec-grid">
+                <a href="matrix-rain.html" class="rec-card">
+                    <img src="https://github.com/AryanMewada/AWW/raw/main/Matrix%20Rain.gif" alt="Matrix Rain">
+                    <div class="rec-info">
+                        <h4>Matrix Rain</h4>
+                        <p>Code / Animation</p>
+                    </div>
+                </a>
+                <a href="hacker-window.html" class="rec-card">
+                    <img src="https://github.com/AryanMewada/AWW/raw/main/Hacker%20Window.gif" alt="Hacker Window">
+                    <div class="rec-info">
+                        <h4>Hacker Window</h4>
+                        <p>Cyberpunk / Tech Style</p>
+                    </div>
+                </a>
+                <a href="radar-scanner.html" class="rec-card">
+                    <img src="https://github.com/AryanMewada/AWW/raw/main/Radar.gif" alt="Radar Scanner">
+                    <div class="rec-info">
+                        <h4>Radar Scanner</h4>
+                        <p>Sci-Fi Interface</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="seo-paragraph">
+            <h2>Interactive 3D Rubik's Cube Live Wallpaper for Low-End PCs</h2>
+            <p>
+                Take your desktop customization to the next level with the <strong>3D Rubik's Cube .aww Live Wallpaper</strong> by Aryan Mewada Studios (BSR). This isn't just a simple video playing in the background; it is a fully rendered 3D model that actually responds to your mouse movements. As you move your cursor across the screen, the Rubik's cube dynamically rotates in real-time, giving your PC a truly premium and interactive feel.
+            </p>
+            <p>
+                How does it run so smoothly? The secret lies in our custom <strong>C++ and OpenGL engine</strong>. While most 3D wallpaper software will completely freeze a low-end laptop, the AnyWebWall engine handles this 3D Rubik's Cube with an astonishing <strong>0% CPU usage</strong> and only 20 to 25 MB of RAM. This makes it the absolute best choice for gamers and users with 2GB or 4GB RAM who want a cool, interactive desktop without experiencing any in-game lag or system slowdowns.
+            </p>
+            <p>
+                Applying this 3D model is fast and easy. Simply download the highly compressed <strong>.aww file</strong> and open it via the free AnyWebWall software. You can also dive into the real-time customization menu to adjust the size, scale, and rotation speed of the cube according to your personal preference. Download the 3D Rubik's Cube live wallpaper today and bring your desktop to life!
+            </p>
+        </div>
+
+        <div class="ad-space">
+            <ins class="adsbygoogle"
+                 style="display:block; width:100%;"
+                 data-ad-client="ca-pub-1032421976701438"
+                 data-ad-slot="5645597669"
+                 data-ad-format="horizontal"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+    </div>
+
+    <footer>
+        <span style="color: #475569; font-size: 0.85rem;">© 2026 Aryan Mewada Studios. All rights reserved.</span>
+    </footer>
+</body>
+</html>
