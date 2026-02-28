@@ -21,8 +21,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1032421976701438"
      crossorigin="anonymous"></script>
 
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-K88700017F"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K88700017F"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,12 +33,25 @@
     <style>
         :root { --bg: #0b1120; --surface: #1e293b; --primary: #3b82f6; --primary-hover: #2563eb; --accent: #8b5cf6; --text-main: #ffffff; --text-muted: #94a3b8; }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
-        body { background-color: var(--bg); color: var(--text-main); line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column; }
+        body { background-color: var(--bg); color: var(--text-main); line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column; overflow-x: hidden; }
 
-        nav { display: flex; justify-content: center; align-items: center; gap: 15px; padding: 20px; background: rgba(11, 17, 32, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); position: sticky; top: 0; z-index: 1000; }
-        .nav-brand { display: flex; align-items: center; gap: 15px; text-decoration: none; color: white; }
-        nav img { height: 40px; width: 40px; border-radius: 50%; object-fit: cover; }
-        nav h1 { font-size: 1.3rem; font-weight: 800; letter-spacing: -0.5px; }
+        /* UPDATED COMPACT & STICKY NAV BAR */
+        nav { 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 10px 30px; 
+            background: rgba(11, 17, 32, 0.95); backdrop-filter: blur(12px); 
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
+            position: sticky; top: 0; z-index: 1000; 
+        }
+        .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: white; }
+        .nav-brand img { height: 32px; width: 32px; border-radius: 50%; object-fit: cover; }
+        .nav-brand h1 { font-size: 1.15rem; font-weight: 800; letter-spacing: -0.5px; }
+        
+        .nav-links { display: flex; gap: 20px; align-items: center; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: 0.3s; }
+        .nav-links a:hover { color: var(--text-main); }
+        .nav-btn { background: rgba(59, 130, 246, 0.15); color: #60a5fa !important; padding: 6px 16px; border-radius: 100px; border: 1px solid rgba(59, 130, 246, 0.3); }
+        .nav-btn:hover { background: #3b82f6; color: white !important; }
 
         .container { max-width: 800px; margin: 40px auto; padding: 0 20px; text-align: center; flex: 1; }
         .app-header { margin-bottom: 30px; }
@@ -55,7 +67,13 @@
         .btn-store:hover { background: rgba(139, 92, 246, 0.25); color: white; transform: translateY(-3px); }
         .info-tag { font-size: 0.9rem; color: var(--text-muted); margin-top: 10px; display: block; }
 
-        .ad-space { width: 100%; max-width: 728px; height: 90px; background: rgba(255, 255, 255, 0.02); border: 1px dashed rgba(255, 255, 255, 0.1); margin: 30px auto; display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 0.8rem; border-radius: 8px; }
+        /* ADVERTISEMENT SPACE (Updated to Horizontal format) */
+        .ad-space { 
+            width: 100%; max-width: 728px; min-height: 90px; 
+            background: rgba(255, 255, 255, 0.02); border: 1px dashed rgba(255, 255, 255, 0.1); 
+            margin: 30px auto; display: flex; align-items: center; justify-content: center; 
+            border-radius: 8px; overflow: hidden; padding: 10px 0;
+        }
 
         .features { text-align: left; margin-top: 40px; background: rgba(255,255,255,0.02); padding: 30px; border-radius: 16px; }
         .features h3 { margin-bottom: 15px; color: white; }
@@ -66,8 +84,12 @@
         .seo-content { margin-top: 30px; text-align: left; color: #94a3b8; }
         .seo-content h3 { color: white; font-size: 1.3rem; margin-bottom: 10px; }
 
-        footer { border-top: 1px solid rgba(255, 255, 255, 0.05); padding: 40px 20px; text-align: center; margin-top: auto; }
-        footer a { color: var(--text-muted); text-decoration: none; margin: 0 10px; }
+        footer { border-top: 1px solid rgba(255, 255, 255, 0.05); padding: 40px 20px; text-align: center; margin-top: auto; background: #080c17; }
+
+        @media (max-width: 768px) {
+            nav { flex-direction: column; padding: 15px; gap: 15px; }
+            .nav-links { width: 100%; justify-content: center; flex-wrap: wrap; }
+        }
     </style>
 </head>
 <body>
@@ -77,10 +99,26 @@
             <img src="logo.png" alt="Logo">
             <h1>Aryan Mewada Studios</h1>
         </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="aww.html">Wallpapers</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
     </nav>
 
     <div class="container">
-        <div class="ad-space">ADVERTISEMENT SPACE (Top)</div>
+        <div class="ad-space">
+            <ins class="adsbygoogle"
+                 style="display:block; width:100%;"
+                 data-ad-client="ca-pub-1032421976701438"
+                 data-ad-slot="5645597669"
+                 data-ad-format="horizontal"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
         <div class="app-header">
             <img src="https://github.com/AryanMewada/Resources/raw/main/AnyWebWall.png" alt="AnyWebWall Logo" class="app-icon">
             <h1 class="app-title">AnyWebWall</h1>
@@ -123,16 +161,21 @@
             </div>
         </div>
 
-        <div class="ad-space">ADVERTISEMENT SPACE (Bottom)</div>
+        <div class="ad-space">
+            <ins class="adsbygoogle"
+                 style="display:block; width:100%;"
+                 data-ad-client="ca-pub-1032421976701438"
+                 data-ad-slot="5645597669"
+                 data-ad-format="horizontal"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
     </div>
 
     <footer>
-        <a href="index.html">Home</a>
-        <a href="aww.html">Wallpapers</a>
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <br><br>
-        <span style="color: #475569; font-size: 0.8rem;">© 2026 Aryan Mewada Studios</span>
+        <span style="color: #475569; font-size: 0.85rem;">© 2026 Aryan Mewada Studios. All rights reserved.</span>
     </footer>
 </body>
 </html>
-
