@@ -26,132 +26,190 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1032421976701438"
      crossorigin="anonymous"></script>
 
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-K88700017F"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-K88700017F');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K88700017F"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K88700017F');
+    </script>
 
     <style>
         :root { --bg: #0b1120; --surface: #1e293b; --primary: #8b5cf6; --primary-hover: #7c3aed; --text-main: #ffffff; --text-muted: #94a3b8; }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
         body { background-color: var(--bg); color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
 
-        nav { display: flex; justify-content: center; align-items: center; gap: 15px; padding: 20px; background: rgba(11, 17, 32, 0.95); border-bottom: 1px solid rgba(255, 255, 255, 0.05); position: sticky; top: 0; z-index: 1000; }
-        nav a { text-decoration: none; display: flex; align-items: center; gap: 15px; color: white; }
-        nav img { height: 40px; width: 40px; border-radius: 50%; object-fit: cover; }
-        nav h1 { font-size: 1.3rem; font-weight: 800; letter-spacing: -0.5px; }
+        /* UPDATED COMPACT & STICKY NAV BAR */
+        nav { 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 10px 30px; 
+            background: rgba(11, 17, 32, 0.95); backdrop-filter: blur(12px); 
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
+            position: sticky; top: 0; z-index: 1000; 
+        }
+        .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: white; }
+        .nav-brand img { height: 32px; width: 32px; border-radius: 50%; object-fit: cover; }
+        .nav-brand h1 { font-size: 1.15rem; font-weight: 800; letter-spacing: -0.5px; }
+        
+        .nav-links { display: flex; gap: 20px; align-items: center; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: 0.3s; }
+        .nav-links a:hover { color: var(--text-main); }
+        .nav-btn { background: rgba(59, 130, 246, 0.15); color: #60a5fa !important; padding: 6px 16px; border-radius: 100px; border: 1px solid rgba(59, 130, 246, 0.3); }
+        .nav-btn:hover { background: #3b82f6; color: white !important; }
 
-        .header-section { text-align: center; padding: 60px 20px 40px; background: radial-gradient(circle at center top, rgba(139, 92, 246, 0.15), transparent 70%); }
+        /* ADVERTISEMENT SPACE */
+        .ad-space { 
+            width: 100%; max-width: 900px; min-height: 90px; 
+            background: rgba(255, 255, 255, 0.02); border: 1px dashed rgba(255, 255, 255, 0.1); 
+            margin: 20px auto; display: flex; align-items: center; justify-content: center; 
+            border-radius: 8px; overflow: hidden; padding: 10px 0;
+        }
+
+        .header-section { text-align: center; padding: 40px 20px 30px; background: radial-gradient(circle at center top, rgba(139, 92, 246, 0.15), transparent 70%); }
         .header-section h2 { font-size: 2.5rem; font-weight: 800; margin-bottom: 15px; }
         .header-section p { color: var(--text-muted); max-width: 600px; margin: 0 auto; }
 
-        .gallery-container { max-width: 1200px; margin: 0 auto; padding: 20px 20px 80px; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; }
-        .wall-card { background: var(--surface); border-radius: 20px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.05); transition: transform 0.3s ease, border-color 0.3s ease; display: flex; flex-direction: column; }
+        .gallery-container { max-width: 1200px; margin: 0 auto; padding: 20px 20px 60px; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; }
+        
+        /* CARD LINK STYLE - Entire card is clickable */
+        .wall-card { 
+            background: var(--surface); border-radius: 20px; overflow: hidden; 
+            border: 1px solid rgba(255, 255, 255, 0.05); transition: transform 0.3s ease, border-color 0.3s ease; 
+            display: flex; flex-direction: column; text-decoration: none; color: white;
+        }
         .wall-card:hover { transform: translateY(-8px); border-color: var(--primary); }
 
         .wall-thumb { width: 100%; height: 180px; background-color: #0b1120; object-fit: cover; display: block; border-bottom: 1px solid rgba(255,255,255,0.05); }
         .wall-info { padding: 20px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
-        .wall-title { font-size: 1.2rem; font-weight: 700; margin-bottom: 5px; }
+        .wall-title { font-size: 1.2rem; font-weight: 700; margin-bottom: 5px; color: white;}
         .wall-type { font-size: 0.85rem; color: var(--primary); font-weight: 600; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px; }
 
-        .btn-download { display: block; width: 100%; padding: 12px 0; background: rgba(255, 255, 255, 0.05); color: white; text-align: center; text-decoration: none; border-radius: 12px; font-weight: 600; transition: 0.3s; border: 1px solid rgba(255, 255, 255, 0.1); }
-        .btn-download:hover { background: var(--primary); border-color: var(--primary); box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4); }
+        .btn-download { display: block; width: 100%; padding: 12px 0; background: rgba(255, 255, 255, 0.05); color: white; text-align: center; border-radius: 12px; font-weight: 600; transition: 0.3s; border: 1px solid rgba(255, 255, 255, 0.1); }
+        .wall-card:hover .btn-download { background: var(--primary); border-color: var(--primary); box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4); }
 
-        .seo-section-footer { max-width: 800px; margin: 0 auto 50px; text-align: center; color: #94a3b8; }
+        .seo-section-footer { max-width: 800px; margin: 0 auto 50px; text-align: center; color: #94a3b8; padding: 0 20px;}
         .seo-section-footer h3 { color: white; font-size: 1.5rem; margin-bottom: 15px; }
 
         footer { border-top: 1px solid rgba(255, 255, 255, 0.05); padding: 40px 20px; text-align: center; background: #080c17; }
-        footer a { color: var(--text-muted); text-decoration: none; margin: 0 10px; }
+        
+        @media (max-width: 768px) {
+            nav { flex-direction: column; padding: 15px; gap: 15px; }
+            .nav-links { width: 100%; justify-content: center; flex-wrap: wrap; }
+        }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="index.html">
+        <a href="index.html" class="nav-brand">
             <img src="logo.png" alt="Logo">
             <h1>Aryan Mewada Studios</h1>
         </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="aww.html" style="color: white;">Gallery</a>
+            <a href="AnyWebWall.html" class="nav-btn">Get AnyWebWall</a>
+        </div>
     </nav>
+
+    <div class="ad-space" style="margin-top: 30px;">
+        <ins class="adsbygoogle"
+             style="display:block; width:100%;"
+             data-ad-client="ca-pub-1032421976701438"
+             data-ad-slot="5645597669"
+             data-ad-format="horizontal"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
 
     <header class="header-section">
         <h2>.aww Wallpaper Gallery</h2>
-        <p>Exclusive lightweight wallpapers for AnyWebWall. <br>Download and open directly in the app.</p>
+        <p>Exclusive lightweight wallpapers for AnyWebWall. <br>Select a wallpaper below to view details and download.</p>
     </header>
 
     <main class="gallery-container">
         
-        <div class="wall-card">
+        <a href="hacker-window.html" class="wall-card">
             <img src="https://github.com/AryanMewada/AWW/raw/main/Hacker%20Window.gif" alt="Hacker Window Preview" class="wall-thumb">
             <div class="wall-info">
                 <div>
                     <h3 class="wall-title">Hacker Window</h3>
                     <span class="wall-type">Cyberpunk / Tech</span>
                 </div>
-                <a href="https://github.com/AryanMewada/AWW/raw/main/Hacker%20Window.aww" class="btn-download">Download .aww</a>
+                <span class="btn-download">Get Wallpaper</span>
             </div>
-        </div>
+        </a>
 
-        <div class="wall-card">
+        <a href="matrix-rain.html" class="wall-card">
             <img src="https://github.com/AryanMewada/AWW/raw/main/Matrix%20Rain.gif" alt="Matrix Rain Preview" class="wall-thumb">
             <div class="wall-info">
                 <div>
-                    <h3 class="wall-title">Matrix Rain</h3>
+                    <h3 class="wall-title">Matrix Digital Rain</h3>
                     <span class="wall-type">Code / Animation</span>
                 </div>
-                <a href="https://github.com/AryanMewada/AWW/raw/main/Matrix%20Rain.aww" class="btn-download">Download .aww</a>
+                <span class="btn-download">Get Wallpaper</span>
             </div>
-        </div>
+        </a>
 
-        <div class="wall-card">
+        <a href="radar-scanner.html" class="wall-card">
             <img src="https://github.com/AryanMewada/AWW/raw/main/Radar.gif" alt="Radar Preview" class="wall-thumb">
             <div class="wall-info">
                 <div>
                     <h3 class="wall-title">Radar Scanner</h3>
                     <span class="wall-type">Tech / Interface</span>
                 </div>
-                <a href="https://github.com/AryanMewada/AWW/raw/main/Radar.aww" class="btn-download">Download .aww</a>
+                <span class="btn-download">Get Wallpaper</span>
             </div>
-        </div>
+        </a>
 
-        <div class="wall-card">
+        <a href="rubiks-cube.html" class="wall-card">
             <img src="https://github.com/AryanMewada/AWW/raw/main/Rubiks%20Cube.gif" alt="Rubik's Cube Preview" class="wall-thumb">
             <div class="wall-info">
                 <div>
-                    <h3 class="wall-title">Rubik's Cube</h3>
+                    <h3 class="wall-title">3D Rubik's Cube</h3>
                     <span class="wall-type">3D / Interactive</span>
                 </div>
-                <a href="https://github.com/AryanMewada/AWW/raw/main/Rubiks%20Cube.aww" class="btn-download">Download .aww</a>
+                <span class="btn-download">Get Wallpaper</span>
             </div>
-        </div>
+        </a>
 
-        <div class="wall-card">
+        <a href="cursor-trail.html" class="wall-card">
             <img src="https://github.com/AryanMewada/AWW/raw/main/Curser%20Trail.gif" alt="Cursor Trail Preview" class="wall-thumb">
             <div class="wall-info">
                 <div>
                     <h3 class="wall-title">Cursor Trail</h3>
                     <span class="wall-type">Interactive / Mouse</span>
                 </div>
-                <a href="https://github.com/AryanMewada/AWW/raw/main/cursor_trail.aww" class="btn-download">Download .aww</a>
+                <span class="btn-download">Get Wallpaper</span>
             </div>
-        </div>
+        </a>
 
-        <div class="wall-card">
+        <a href="steav.html" class="wall-card">
             <img src="https://github.com/AryanMewada/AWW/raw/main/Steav.gif" alt="Steav Preview" class="wall-thumb">
             <div class="wall-info">
                 <div>
                     <h3 class="wall-title">Steav</h3>
                     <span class="wall-type">Character / Animation</span>
                 </div>
-                <a href="https://github.com/AryanMewada/AWW/raw/main/steav.aww" class="btn-download">Download .aww</a>
+                <span class="btn-download">Get Wallpaper</span>
             </div>
-        </div>
+        </a>
 
     </main>
+
+    <div class="ad-space" style="margin-bottom: 40px;">
+        <ins class="adsbygoogle"
+             style="display:block; width:100%;"
+             data-ad-client="ca-pub-1032421976701438"
+             data-ad-slot="5645597669"
+             data-ad-format="horizontal"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
 
     <div class="seo-section-footer">
         <h3>Explore Our Exclusive Live Wallpaper Collection</h3>
@@ -164,12 +222,7 @@
     </div>
 
     <footer>
-        <a href="index.html">Home</a>
-        <a href="AnyWebWall.html">AnyWebWall App</a>
-        <br><br>
-        <span style="color: #475569; font-size: 0.8rem;">© 2026 Aryan Mewada Studios</span>
+        <span style="color: #475569; font-size: 0.85rem;">© 2026 Aryan Mewada Studios. All rights reserved.</span>
     </footer>
 </body>
 </html>
-
-
