@@ -39,13 +39,23 @@
 
         body { background-color: var(--bg); color: var(--text-main); overflow-x: hidden; line-height: 1.6; }
 
-        nav {
-            display: flex; justify-content: center; align-items: center; gap: 15px; padding: 20px;
-            background: rgba(11, 17, 32, 0.85); backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05); position: sticky; top: 0; z-index: 1000;
+        /* UPDATED COMPACT & STICKY NAV BAR */
+        nav { 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 10px 30px; 
+            background: rgba(11, 17, 32, 0.95); backdrop-filter: blur(12px); 
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
+            position: sticky; top: 0; z-index: 1000; 
         }
-        nav img { height: 40px; width: 40px; object-fit: cover; border-radius: 50%; }
-        nav h1 { font-size: 1.3rem; font-weight: 800; letter-spacing: -0.5px; }
+        .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: white; }
+        .nav-brand img { height: 32px; width: 32px; border-radius: 50%; object-fit: cover; }
+        .nav-brand h1 { font-size: 1.15rem; font-weight: 800; letter-spacing: -0.5px; }
+        
+        .nav-links { display: flex; gap: 20px; align-items: center; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: 0.3s; }
+        .nav-links a:hover { color: var(--text-main); }
+        .nav-btn { background: rgba(59, 130, 246, 0.15); color: #60a5fa !important; padding: 6px 16px; border-radius: 100px; border: 1px solid rgba(59, 130, 246, 0.3); }
+        .nav-btn:hover { background: #3b82f6; color: white !important; }
 
         .hero-section {
             padding: 80px 20px 40px; text-align: center;
@@ -103,14 +113,24 @@
         .footer-nav a:hover { color: var(--primary); }
         .copyright { margin-top: 30px; color: rgba(255, 255, 255, 0.2); font-size: 0.85rem; }
 
-        @media (max-width: 600px) { .hero-title { font-size: 1.8rem; } .grid { grid-template-columns: 1fr; } }
+        @media (max-width: 600px) { 
+            .hero-title { font-size: 1.8rem; } 
+            .grid { grid-template-columns: 1fr; } 
+            nav { flex-direction: column; padding: 15px; gap: 15px; }
+            .nav-links { width: 100%; justify-content: center; flex-wrap: wrap; }
+        }
     </style>
 </head>
 <body>
 
     <nav>
-        <img src="logo.png" alt="Logo">
-        <h1>Aryan Mewada Studios</h1>
+        <a href="index.html" class="nav-brand">
+            <img src="logo.png" alt="Logo">
+            <h1>Aryan Mewada Studios</h1>
+        </a>
+        <div class="nav-links">
+            <a href="https://github.com/AryanMewada" target="_blank" class="nav-btn">View GitHub</a>
+        </div>
     </nav>
 
     <section class="hero-section">
@@ -136,11 +156,19 @@
                 <h3>AnyVidWall</h3>
                 <p>The ultimate lightweight live wallpaper engine. Bring your desktop to life without slowing down your PC.</p>
             </a>
+            
             <a href="AnyWebWall.html" class="card">
                 <img src="https://github.com/AryanMewada/Resources/raw/main/AnyWebWall.png" alt="AnyWebWall Logo">
                 <h3>AnyWebWall</h3>
                 <p>Turn any custom 2D/3D file into a live wallpaper. Built on C++ and OpenGL for maximum performance.</p>
             </a>
+
+            <a href="bsr-screen-recorder.html" class="card">
+                <img src="https://github.com/AryanMewada/Resources/raw/main/app_icon-8.png" alt="BSR Screen Recorder Logo">
+                <h3>BSR Screen Recorder</h3>
+                <p>The ultimate zero-lag screen recording software for low-end PCs. Capture 60FPS gameplay smoothly.</p>
+            </a>
+
             <div class="card dashed">
                 <h3>More Apps Coming Soon</h3>
                 <p>We are working on new tools for you.</p>
