@@ -8,9 +8,9 @@
 
     <title>AnyVidWall - Free Live Wallpaper App for Low End PC (Download)</title>
     
-    <meta name="description" content="Download AnyVidWall official app. The best lightweight video wallpaper software for Windows. Optimized for low-end PCs (2GB RAM) with zero lag gaming performance.">
+    <meta name="description" content="Download AnyVidWall, the ultimate lightweight video live wallpaper software for Windows. Optimized for low-end 2GB RAM PCs with zero lag gaming performance.">
     
-    <meta name="keywords" content="AnyVidWall, AnyVidWall Download, Free Video Wallpaper App, Wallpaper Engine Free Alternative, Live Wallpaper for Windows 10, Set Video as Wallpaper, Motion Desktop Background, Zero Lag Wallpaper, Gaming Mode Wallpaper, Low CPU Usage Wallpaper, Play Video on Desktop, Animated Backgrounds for Low End PC, Background Loop Player, Best Lightweight Wallpaper App, Windows 7 Live Wallpaper, anyvidwall download ,anyvidwall download for pc ,anyvidwall download for low end pc ,any vid wall ,any vid wall download ,any vid wall download for pc ,any vid wall download for low end pc ,any vid wall ,video wallpaper ,video wallpaper app for pc ,live wallpaper ,live wallpaper app download for pc ,AnyVidWall ,Best Live Wallpaper App For PC ,best live wallpaper app for pc ,best live wallpaper app for low end pc ,anyvidwall live wallpaper app ,anyvidwall live wallpapaer download ,anyvidwall live wallpaper app ,anyvidwall live wallpaper app download for low end pc ,Anime live wallpaper ,battery saver ">
+    <meta name="keywords" content="AnyVidWall, AnyVidWall Download, Free Video Wallpaper App, Wallpaper Engine Free Alternative, Live Wallpaper for Windows 10, Set Video as Wallpaper, Motion Desktop Background, Zero Lag Wallpaper, Gaming Mode Wallpaper, Low CPU Usage Wallpaper, Play Video on Desktop, Animated Backgrounds for Low End PC, Background Loop Player, Best Lightweight Wallpaper App, Windows 7 Live Wallpaper, video wallpaper, video wallpaper app for pc, live wallpaper app download for pc, Best Live Wallpaper App For PC, best live wallpaper app for low end pc, anyvidwall live wallpaper app, Anime live wallpaper, battery saver wallpaper, 0% cpu video wallpaper, vlc engine wallpaper, mp4 to wallpaper, mkv wallpaper, avi wallpaper, webm background, auto-pause live wallpaper, windows 11 motion background, lively wallpaper alternative, dynamic desktop video, custom video background, Aryan Mewada Studios software, low specs pc customization, aesthetic pc setup, gaming pc wallpaper, animated desktop free, motion wallpaper, custom windows UI, low resource background player, hardware accelerated video wallpaper, best freeware customization, pc optimization tools, video looping software desktop, free desktop modding, BSR apps, aryan mewada developer, tech software downloads, 64-bit video wallpaper, 4k video wallpaper player, free pc software, make old pc fast">
     
     <meta name="author" content="Aryan Mewada Studios">
     <meta name="robots" content="index, follow">
@@ -49,20 +49,24 @@
         }
         .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: white; }
         .nav-brand img { height: 32px; width: 32px; border-radius: 50%; object-fit: cover; }
-        .nav-brand h1 { font-size: 1.15rem; font-weight: 800; letter-spacing: -0.5px; }
+        
+        /* H1 FIX: Changed header styling to target the new span class */
+        .nav-brand .nav-title { font-size: 1.15rem; font-weight: 800; letter-spacing: -0.5px; }
         
         .nav-links { display: flex; gap: 20px; align-items: center; }
         .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: 0.3s; }
         .nav-links a:hover { color: var(--text-main); }
         
-        /* NEW HEADER STAR BUTTON */
         .nav-star { color: #fcd34d !important; display: flex; align-items: center; gap: 5px; }
         .nav-star:hover { color: #f59e0b !important; transform: scale(1.05); }
 
         .container { max-width: 800px; margin: 40px auto; padding: 0 20px; text-align: center; flex: 1; }
         .app-header { margin-bottom: 30px; }
         .app-icon { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid var(--surface); box-shadow: 0 0 30px rgba(59, 130, 246, 0.3); margin-bottom: 25px; }
+        
+        /* THIS REMAINS THE ONLY H1 ON THE PAGE */
         .app-title { font-size: 2rem; font-weight: 800; margin-bottom: 10px; }
+        
         .app-desc { color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto 30px; }
 
         .download-box { background: var(--surface); padding: 40px; border-radius: 24px; border: 1px solid rgba(255, 255, 255, 0.05); }
@@ -71,13 +75,11 @@
         .btn-download { display: inline-flex; align-items: center; justify-content: center; background: var(--primary); color: white; font-size: 1.2rem; font-weight: 700; padding: 16px 40px; border-radius: 100px; text-decoration: none; transition: 0.3s; width: 100%; max-width: 350px; box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3); }
         .btn-download:hover { background: var(--primary-hover); transform: translateY(-3px); box-shadow: 0 15px 30px rgba(59, 130, 246, 0.5); }
         
-        /* NEW GITHUB BUTTON */
         .btn-github { display: inline-flex; align-items: center; justify-content: center; background: #24292e; color: white; font-size: 1.1rem; font-weight: 600; padding: 14px 40px; border-radius: 100px; text-decoration: none; transition: 0.3s; width: 100%; max-width: 350px; border: 1px solid rgba(255,255,255,0.1); }
         .btn-github:hover { background: #2f363d; transform: translateY(-3px); border-color: #fcd34d; }
 
         .info-tag { font-size: 0.9rem; color: var(--text-muted); margin-top: 5px; margin-bottom: 15px; display: block; }
 
-        /* NEW INSTALLATION GUIDE BOX */
         .install-guide { background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 12px; padding: 15px; margin: 10px auto 20px; max-width: 500px; text-align: left; color: #cbd5e1; font-size: 0.9rem; line-height: 1.5; }
         .install-guide strong { color: #60a5fa; display: block; margin-bottom: 5px; font-size: 0.95rem;}
         .install-guide b { color: white; }
@@ -106,7 +108,7 @@
     <nav>
         <a href="index.html" class="nav-brand">
             <img src="logo.png" alt="Logo">
-            <h1>Aryan Mewada Studios</h1>
+            <span class="nav-title">Aryan Mewada Studios</span>
         </a>
         <div class="nav-links">
             <a href="index.html">Home</a>
