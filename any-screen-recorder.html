@@ -6,11 +6,11 @@
     
     <link rel="canonical" href="https://aryanmewada.github.io/any-screen-recorder.html" />
 
-    <title>Any Screen Recorder - Best Zero-Lag Screen Recorder for Low End PC</title>
+    <title>Any Screen Recorder - Free Zero-Lag PC Recorder</title>
     
-    <meta name="description" content="Download Any Screen Recorder. The ultimate zero-lag screen recording software for low-end PCs. Free, no watermark, 60 FPS gameplay capture with direct GPU rendering.">
+    <meta name="description" content="Download Any Screen Recorder, the best zero-lag screen recording software for low-end PCs. Capture 60FPS gameplay for free with no watermark & 0% CPU usage.">
     
-    <meta name="keywords" content="Any Screen Recorder, Free Screen Recorder for Low End PC, Zero Lag Screen Recorder, No Watermark Screen Recorder, Gameplay Recorder 2GB RAM, Windows 10 Screen Recorder, Any Screen Recorder Download, Aryan Mewada Studios, Best OBS Alternative for Low End PC, Record screen without lag, 60 FPS Game Recorder, Audio only recorder, PC screen recorder free download, screen capture tool, lightweight screen recorder, best screen recorder for gaming, screen recorder with internal audio, windows 11 screen recorder, screen recorder without fps drop, desktop recorder, tutorial screen recorder, mouse highlight screen recorder, screen recorder for low spec pc, high quality screen recorder, screen recorder software for laptop, BSR company apps, aryan mewada screen recorder, screen recording for youtube, stream recording, local screen recording, direct3d screen recorder, hardware accelerated screen recorder, screen recorder free download full version, screen recorder no time limit, best screen recorder 2026, screen recorder for pc windows 10 64 bit, screen recorder for 4gb ram pc, screen recorder 1080p 60fps, screen recorder original resolution, record game without lag, free game recording software, screen recorder minimal cpu usage, screc file player">
+    <meta name="keywords" content="Any Screen Recorder, Free Screen Recorder for Low End PC, Zero Lag Screen Recorder, No Watermark Screen Recorder, Gameplay Recorder 2GB RAM, Windows 10 Screen Recorder, Any Screen Recorder Download, Aryan Mewada Studios, Best OBS Alternative for Low End PC, Record screen without lag, 60 FPS Game Recorder, Audio only recorder, PC screen recorder free download, screen capture tool, lightweight screen recorder, best screen recorder for gaming, screen recorder with internal audio, windows 11 screen recorder, screen recorder without fps drop, desktop recorder, tutorial screen recorder, mouse highlight screen recorder, screen recorder for low spec pc, high quality screen recorder, screen recorder software for laptop, BSR company apps, aryan mewada screen recorder, screen recording for youtube, stream recording, local screen recording, direct3d screen recorder, hardware accelerated screen recorder, screen recorder free download full version, screen recorder no time limit, best screen recorder 2026, screen recorder for pc windows 10 64 bit, screen recorder for 4gb ram pc, screen recorder 1080p 60fps, screen recorder original resolution, record game without lag, free game recording software, screen recorder minimal cpu usage, screc file player, lightweight game capture, fraps alternative free, bandicam alternative free, open broadcaster software alternative, record screen and audio, capture windows desktop, screen recorder for potato pc, no lag recording software, record 60fps gaming, best free screen recorder for windows 7, free screen recorder no lag, record gameplay 2gb ram, best screen recorder for youtube gaming, desktop screen recorder, free video capture software, game capture software, screen recorder with cursor highlight, tutorial recording software, screen recorder without watermark for pc, low resource screen recorder, smooth screen recorder, best capture card alternative, record screen free, any screen recorder official, bsr screen recorder, video recording tool, screen capture app, high fps screen recorder, computer screen recorder, no lag gameplay recorder">
     
     <meta name="author" content="Aryan Mewada Studios">
     <meta name="robots" content="index, follow">
@@ -40,7 +40,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
         body { background-color: var(--bg); color: var(--text-main); line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column; overflow-x: hidden; }
         
-        /* HEADER NAV (Cleaned up, No Wallpapers tab) */
+        /* HEADER NAV */
         nav { 
             display: flex; justify-content: space-between; align-items: center; 
             padding: 10px 30px; 
@@ -50,7 +50,9 @@
         }
         .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: white; }
         .nav-brand img { height: 32px; width: 32px; border-radius: 50%; object-fit: cover; }
-        .nav-brand h1 { font-size: 1.15rem; font-weight: 800; letter-spacing: -0.5px; }
+        
+        /* FIXED H1 ISSUE: Header text is now a span class instead of h1 */
+        .nav-brand .nav-title { font-size: 1.15rem; font-weight: 800; letter-spacing: -0.5px; }
         
         .nav-links { display: flex; gap: 20px; align-items: center; }
         .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: 0.3s; }
@@ -61,7 +63,10 @@
         .container { max-width: 900px; margin: 40px auto; padding: 0 20px; text-align: center; flex: 1; }
         .app-header { margin-bottom: 30px; }
         .app-icon { width: 150px; height: 150px; border-radius: 28px; object-fit: cover; border: 4px solid var(--surface); box-shadow: 0 0 30px rgba(59, 130, 246, 0.3); margin-bottom: 25px; }
+        
+        /* THIS IS THE ONLY H1 ON THE PAGE NOW */
         .app-title { font-size: 2.2rem; font-weight: 800; margin-bottom: 10px; }
+        
         .app-desc { color: var(--text-muted); font-size: 1.15rem; max-width: 700px; margin: 0 auto 30px; }
 
         .download-box { background: var(--surface); padding: 40px; border-radius: 24px; border: 1px solid rgba(255, 255, 255, 0.05); margin-bottom: 40px; }
@@ -126,7 +131,7 @@
     <nav>
         <a href="index.html" class="nav-brand">
             <img src="logo.png" alt="Logo">
-            <h1>Aryan Mewada Studios</h1>
+            <span class="nav-title">Aryan Mewada Studios</span>
         </a>
         <div class="nav-links">
             <a href="index.html">Home</a>
