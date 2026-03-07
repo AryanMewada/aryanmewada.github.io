@@ -6,11 +6,11 @@
     
     <link rel="canonical" href="https://aryanmewada.github.io/earth.html" />
 
-    <title>Download 3D Interactive Earth Live Wallpaper for PC | AnyWebWall</title>
+    <title>3D Earth Interactive Live Wallpaper | AnyWebWall</title>
     
-    <meta name="description" content="Get a fully interactive 3D Earth live wallpaper for your Windows PC. Rotate the globe with your mouse to explore countries. 0% CPU usage, extremely lightweight.">
+    <meta name="description" content="Download the 3D Earth interactive live wallpaper for your PC. Rotate the globe with your mouse using 0% CPU. Perfectly optimized for low-end Windows systems.">
     
-    <meta name="keywords" content="3D Earth Live Wallpaper, Interactive Globe Desktop, Earth PC Background, 3D Planet Wallpaper, Rotate Earth Wallpaper, AnyWebWall Earth Theme, .aww file download, Zero Lag 3D Wallpaper, C++ Live Wallpaper, Mouse Tracking Wallpaper, Low RAM 3D Wallpaper, BSR Apps, Aryan Mewada Studios, World Map Live Wallpaper">
+    <meta name="keywords" content="3D Earth Live Wallpaper, Interactive Globe Desktop, Earth PC Background, 3D Planet Wallpaper, Rotate Earth Wallpaper, AnyWebWall Earth Theme, .aww file download, Zero Lag 3D Wallpaper, C++ Live Wallpaper, Mouse Tracking Wallpaper, Low RAM 3D Wallpaper, BSR Apps, Aryan Mewada Studios, World Map Live Wallpaper, interactive 3d earth, animated earth wallpaper pc, 0% cpu live wallpaper, opengl 3d wallpaper, free 3d earth desktop, globe wallpaper windows 10, windows 11 3d background, rotate planet desktop, best wallpaper engine alternative, low end pc wallpaper, 2gb ram wallpaper engine, dynamic desktop globe, tech background, hardware accelerated wallpaper, space live wallpaper pc, interactive planet background, custom aww files, zero resource usage desktop, aesthetic pc setup, 3d modelling wallpaper, cool pc screensavers, pc optimization tools, zero lag gaming background, animated desktop free, motion wallpaper, custom windows UI, low resource background player, best freeware customization, windows desktop modding, planet earth background interactive, download free aww wallpapers">
     
     <meta name="author" content="Aryan Mewada Studios">
     <meta name="robots" content="index, follow">
@@ -50,7 +50,9 @@
         }
         .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: white; }
         .nav-brand img { height: 32px; width: 32px; border-radius: 50%; object-fit: cover; }
-        .nav-brand h1 { font-size: 1.15rem; font-weight: 800; letter-spacing: -0.5px; }
+        
+        /* FIXED H1 ISSUE: Nav text is a span now */
+        .nav-brand .nav-title { font-size: 1.15rem; font-weight: 800; letter-spacing: -0.5px; }
         
         .nav-links { display: flex; gap: 20px; align-items: center; }
         .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: 0.3s; }
@@ -93,9 +95,12 @@
         .main-gif-info {
             padding: 20px;
         }
+        
+        /* THIS REMAINS THE ONLY H1 ON THE PAGE */
         .main-gif-info h1 {
             font-size: 1.4rem; font-weight: 700; color: white; margin-bottom: 5px; line-height: 1.2;
         }
+        
         .main-gif-info p {
             color: var(--primary); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin: 0;
         }
@@ -149,7 +154,7 @@
     <nav>
         <a href="index.html" class="nav-brand">
             <img src="logo.png" alt="Logo">
-            <h1>Aryan Mewada Studios</h1>
+            <span class="nav-title">Aryan Mewada Studios</span>
         </a>
         <div class="nav-links">
             <a href="index.html">Home</a>
