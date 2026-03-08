@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="canonical" href="https://aryanmewada.github.io/contact.html" />
+
+    <title>Contact Us | Aryan Mewada Studios</title>
+    
+    <meta name="description" content="Get in touch with Aryan Mewada Studios (BSR). For software support, feedback, or business inquiries regarding AnyWebWall and Any Screen Recorder.">
+    
+    <meta name="author" content="Aryan Mewada Studios">
+    <meta name="robots" content="index, follow">
+
+    <link rel="icon" type="image/png" href="logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K88700017F"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K88700017F');
+    </script>
+
+    <style>
+        :root { --bg: #0b1120; --surface: #1e293b; --primary: #3b82f6; --primary-hover: #2563eb; --text-main: #ffffff; --text-muted: #94a3b8; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg); color: var(--text-main); line-height: 1.8; overflow-x: hidden; }
+
+        /* NAV BAR */
+        nav { 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 10px 30px; 
+            background: rgba(11, 17, 32, 0.95); backdrop-filter: blur(12px); 
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
+            position: sticky; top: 0; z-index: 1000; 
+        }
+        .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: white; }
+        .nav-brand img { height: 32px; width: 32px; border-radius: 50%; object-fit: cover; }
+        .nav-brand .nav-title { font-size: 1.15rem; font-weight: 800; letter-spacing: -0.5px; }
+        
+        .nav-links { display: flex; gap: 20px; align-items: center; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: 0.3s; }
+        .nav-links a:hover { color: var(--text-main); }
+        .nav-btn { background: rgba(59, 130, 246, 0.15); color: #60a5fa !important; padding: 6px 16px; border-radius: 100px; border: 1px solid rgba(59, 130, 246, 0.3); }
+        .nav-btn:hover { background: #3b82f6; color: white !important; }
+
+        .header-section { text-align: center; padding: 60px 20px 40px; background: radial-gradient(circle at center top, rgba(59, 130, 246, 0.1), transparent 70%); }
+        .header-section h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 15px; color: white; }
+        .header-section p { color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px 20px 60px; display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; }
+
+        .contact-info { background: var(--surface); border-radius: 20px; padding: 40px; border: 1px solid rgba(255, 255, 255, 0.05); }
+        .contact-info h2 { color: white; font-size: 1.8rem; margin-bottom: 20px; border-left: 4px solid var(--primary); padding-left: 15px; }
+        .contact-info p { color: #cbd5e1; margin-bottom: 30px; font-size: 1rem; }
+        
+        .info-block { margin-bottom: 25px; }
+        .info-block h4 { color: var(--text-muted); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
+        .info-block p { color: white; font-size: 1.1rem; font-weight: 600; margin-bottom: 0; }
+        .info-block a { color: var(--primary); text-decoration: none; transition: 0.3s; }
+        .info-block a:hover { color: var(--primary-hover); text-decoration: underline; }
+
+        .contact-form { background: rgba(15, 23, 42, 0.5); border-radius: 20px; padding: 40px; border: 1px solid rgba(255, 255, 255, 0.05); }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; color: var(--text-muted); margin-bottom: 8px; font-size: 0.95rem; font-weight: 500; }
+        .form-group input, .form-group textarea { width: 100%; background: #0b1120; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 15px; color: white; font-family: inherit; font-size: 1rem; outline: none; transition: 0.3s; }
+        .form-group input:focus, .form-group textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2); }
+        .form-group textarea { resize: vertical; min-height: 150px; }
+        
+        .btn-submit { display: inline-block; background: var(--primary); color: white; border: none; padding: 15px 30px; font-size: 1.1rem; font-weight: 700; border-radius: 10px; cursor: pointer; transition: 0.3s; width: 100%; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3); }
+        .btn-submit:hover { background: var(--primary-hover); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4); }
+
+        footer { border-top: 1px solid rgba(255, 255, 255, 0.05); padding: 40px 20px; text-align: center; background: #080c17; margin-top: 40px; }
+        .footer-links { margin-bottom: 20px; }
+        .footer-links a { color: var(--text-muted); text-decoration: none; margin: 0 15px; font-size: 0.9rem; }
+        .footer-links a:hover { color: var(--primary); }
+
+        @media (max-width: 768px) {
+            .container { grid-template-columns: 1fr; }
+            nav { flex-direction: column; padding: 15px; gap: 15px; }
+            .nav-links { width: 100%; justify-content: center; flex-wrap: wrap; }
+            .header-section h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-brand">
+            <img src="logo.png" alt="Logo">
+            <span class="nav-title">Aryan Mewada Studios</span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="https://github.com/AryanMewada" target="_blank" class="nav-btn">View GitHub</a>
+        </div>
+    </nav>
+
+    <header class="header-section">
+        <h1>Get in Touch</h1>
+        <p>Have a question about our software, found a bug, or want to suggest a new feature? We would love to hear from you.</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p>At Aryan Mewada Studios, we are dedicated to providing the best freeware tools. Feel free to reach out through any of the channels below.</p>
+            
+            <div class="info-block">
+                <h4>Email Support</h4>
+                <p><a href="mailto:aryanmewadastudios@gmail.com">aryanmewadastudios@gmail.com</a></p>
+            </div>
+            
+            <div class="info-block">
+                <h4>Developer Profile</h4>
+                <p><a href="https://github.com/AryanMewada" target="_blank">github.com/AryanMewada</a></p>
+            </div>
+            
+            <div class="info-block">
+                <h4>Location</h4>
+                <p>Bhopal, Madhya Pradesh<br>India</p>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Thanks for your message! This form is currently in test mode.');">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Bug report, Feature request, etc." required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="How can we help you?" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms.html">Terms & Conditions</a>
+        </div>
+        <span style="color: #475569; font-size: 0.85rem;">© 2026 Aryan Mewada Studios. All rights reserved.</span>
+    </footer>
+</body>
+</html>
