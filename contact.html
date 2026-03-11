@@ -128,7 +128,12 @@
         </div>
 
         <div class="contact-form">
-            <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Thanks for your message! This form is currently in test mode.');">
+            <form action="https://api.web3forms.com/submit" method="POST">
+                
+                <input type="hidden" name="access_key" value="65e856c5-62e9-4707-ba73-712fd2b31a2e">
+                
+                <input type="hidden" name="redirect" value="https://aryanmewada.github.io/">
+
                 <div class="form-group">
                     <label for="name">Your Name</label>
                     <input type="text" id="name" name="name" placeholder="Enter your name" required>
