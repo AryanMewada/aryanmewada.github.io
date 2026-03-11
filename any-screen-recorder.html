@@ -53,7 +53,7 @@
         .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: white; }
         .nav-brand img { height: 32px; width: 32px; border-radius: 50%; object-fit: cover; }
         
-        /* FIXED H1 ISSUE: Header text is now a span class instead of h1 */
+        /* FIXED H1 ISSUE */
         .nav-brand .nav-title { font-size: 1.15rem; font-weight: 800; letter-spacing: -0.5px; }
         
         .nav-links { display: flex; gap: 20px; align-items: center; }
@@ -74,7 +74,7 @@
         .download-box { background: var(--surface); padding: 40px; border-radius: 24px; border: 1px solid rgba(255, 255, 255, 0.05); margin-bottom: 40px; position: relative; }
         
         /* Live Download Counter Style */
-        .live-counter { font-size: 1.2rem; font-weight: 800; color: #fcd34d; margin-bottom: 15px; display: inline-flex; align-items: center; gap: 8px; background: rgba(252, 211, 77, 0.1); padding: 8px 20px; border-radius: 100px; border: 1px solid rgba(252, 211, 77, 0.2); }
+        .live-counter { font-size: 1.1rem; font-weight: 700; color: #fcd34d; margin-bottom: 15px; display: inline-flex; align-items: center; gap: 8px; background: rgba(252, 211, 77, 0.1); padding: 8px 20px; border-radius: 100px; border: 1px solid rgba(252, 211, 77, 0.2); }
         
         .btn-group { display: flex; flex-direction: column; gap: 15px; align-items: center; margin: 20px 0; }
         .btn-download { display: inline-flex; align-items: center; justify-content: center; background: var(--primary); color: white; font-size: 1.2rem; font-weight: 700; padding: 18px 40px; border-radius: 100px; text-decoration: none; transition: 0.3s; width: 100%; max-width: 350px; box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3); cursor: pointer; border: none; }
@@ -172,7 +172,7 @@
             </div>
 
             <div class="btn-group">
-                <a href="https://github.com/AryanMewada/Resources/raw/main/Any_Screen_Recorder_Setup_v1.0.exe" class="btn-download" onclick="incrementDownload()">
+                <a href="https://github.com/AryanMewada/Resources/raw/main/Any_Screen_Recorder_Setup_v1.0.exe" class="btn-download" onclick="incrementDownload(event)">
                     Download Free For PC
                 </a>
                 <a href="https://github.com/AryanMewada" target="_blank" class="btn-github">
@@ -311,63 +311,73 @@
     </footer>
 
     <script>
-        // Supabase Initialization using the provided keys
-        const supabaseUrl = 'https://popqfjpredtwzteenrz.supabase.co';
-        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBvcHFmanByZWR0d3R6ZWVubnJ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMyNDU2MDEsImV4cCI6MjA4ODgyMTYwMX0.EEdp_Qr4YsTSNp9zeN5NmWIyRmZBaJ1UNzle48DbmcA';
-        const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
-        
-        // Exact App Name matching the database table
-        const appName = 'Any Screen Recorder';
+        // Check if Supabase library loaded correctly
+        if (!window.supabase) {
+            document.getElementById('downloadCountDisplay').innerText = "🔥 Error: Connection Failed";
+        } else {
+            const supabaseUrl = 'https://popqfjpredtwzteenrz.supabase.co';
+            const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBvcHFmanByZWR0d3R6ZWVubnJ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMyNDU2MDEsImV4cCI6MjA4ODgyMTYwMX0.EEdp_Qr4YsTSNp9zeN5NmWIyRmZBaJ1UNzle48DbmcA';
+            const supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
+            
+            const appName = 'Any Screen Recorder';
+            const countDisplay = document.getElementById('downloadCountDisplay');
 
-        // Fetch Initial Download Count
-        async function fetchDownloadCount() {
-            try {
-                const { data, error } = await supabase
-                    .from('downloads')
-                    .select('download_count')
-                    .eq('app_name', appName)
-                    .single();
-                
-                if (data) {
-                    document.getElementById('downloadCountDisplay').innerText = `🔥 Total Downloads: ${data.download_count}`;
-                } else if (error) {
-                    console.error("Error fetching count:", error);
-                    document.getElementById('downloadCountDisplay').innerText = `🔥 Total Downloads: 0`;
-                }
-            } catch (err) {
-                console.error("Network error:", err);
-            }
-        }
-
-        // Increment Download Count on Click
-        async function incrementDownload() {
-            try {
-                // Fetch the latest count first
-                const { data, error } = await supabase
-                    .from('downloads')
-                    .select('download_count')
-                    .eq('app_name', appName)
-                    .single();
-                
-                if (data) {
-                    const newCount = data.download_count + 1;
-                    
-                    // Update database
-                    await supabase
+            // Fetch Initial Count
+            async function fetchDownloadCount() {
+                try {
+                    const { data, error } = await supabaseClient
                         .from('downloads')
-                        .update({ download_count: newCount })
-                        .eq('app_name', appName);
+                        .select('download_count')
+                        .eq('app_name', appName)
+                        .single();
                     
-                    // Update UI immediately
-                    document.getElementById('downloadCountDisplay').innerText = `🔥 Total Downloads: ${newCount}`;
+                    if (error) {
+                        countDisplay.innerText = "🔥 Error: " + error.message; // Will print exactly what went wrong
+                        console.error("Supabase Error:", error);
+                    } else if (data) {
+                        countDisplay.innerText = `🔥 Total Downloads: ${data.download_count}`;
+                    } else {
+                        countDisplay.innerText = "🔥 Error: App not found in table";
+                    }
+                } catch (err) {
+                    countDisplay.innerText = "🔥 Network Error";
+                    console.error("JS Error:", err);
                 }
-            } catch (err) {
-                console.error("Error updating count:", err);
             }
-        }
 
-        // Run fetch on page load
-        fetchDownloadCount();
+            // Fix: Wait for DB update before triggering download
+            async function incrementDownload(event) {
+                event.preventDefault(); // Stop instant download
+                const downloadUrl = event.currentTarget.href; // Save link
+                
+                try {
+                    countDisplay.innerText = "🔥 Starting Download...";
+                    
+                    const { data, error } = await supabaseClient
+                        .from('downloads')
+                        .select('download_count')
+                        .eq('app_name', appName)
+                        .single();
+                    
+                    if (data) {
+                        const newCount = data.download_count + 1;
+                        await supabaseClient
+                            .from('downloads')
+                            .update({ download_count: newCount })
+                            .eq('app_name', appName);
+                        
+                        countDisplay.innerText = `🔥 Total Downloads: ${newCount}`;
+                    }
+                } catch (err) {
+                    console.error("Update Error:", err);
+                }
+                
+                // Finally trigger the actual file download
+                window.location.href = downloadUrl;
+            }
+
+            fetchDownloadCount();
+        }
     </script>
 </body>
 </html>
