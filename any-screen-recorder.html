@@ -315,7 +315,7 @@
         if (!window.supabase) {
             document.getElementById('downloadCountDisplay').innerText = "🔥 Error: Connection Failed";
         } else {
-            const supabaseUrl = 'https://popqfjpredtwzteenrz.supabase.co';
+            const supabaseUrl = 'https://popqfjpredtwtzeennrz.supabase.co'; // CORRECTED URL
             const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBvcHFmanByZWR0d3R6ZWVubnJ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMyNDU2MDEsImV4cCI6MjA4ODgyMTYwMX0.EEdp_Qr4YsTSNp9zeN5NmWIyRmZBaJ1UNzle48DbmcA';
             const supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
             
@@ -332,7 +332,7 @@
                         .single();
                     
                     if (error) {
-                        countDisplay.innerText = "🔥 Error: " + error.message; // Will print exactly what went wrong
+                        countDisplay.innerText = "🔥 Error: " + error.message; 
                         console.error("Supabase Error:", error);
                     } else if (data) {
                         countDisplay.innerText = `🔥 Total Downloads: ${data.download_count}`;
@@ -345,7 +345,7 @@
                 }
             }
 
-            // Fix: Wait for DB update before triggering download
+            // Wait for DB update before triggering download
             async function incrementDownload(event) {
                 event.preventDefault(); // Stop instant download
                 const downloadUrl = event.currentTarget.href; // Save link
