@@ -23,6 +23,8 @@
     <link rel="icon" type="image/png" href="logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
 
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1032421976701438"
      crossorigin="anonymous"></script>
 
@@ -69,10 +71,13 @@
         
         .app-desc { color: var(--text-muted); font-size: 1.15rem; max-width: 700px; margin: 0 auto 30px; }
 
-        .download-box { background: var(--surface); padding: 40px; border-radius: 24px; border: 1px solid rgba(255, 255, 255, 0.05); margin-bottom: 40px; }
+        .download-box { background: var(--surface); padding: 40px; border-radius: 24px; border: 1px solid rgba(255, 255, 255, 0.05); margin-bottom: 40px; position: relative; }
+        
+        /* Live Download Counter Style */
+        .live-counter { font-size: 1.2rem; font-weight: 800; color: #fcd34d; margin-bottom: 15px; display: inline-flex; align-items: center; gap: 8px; background: rgba(252, 211, 77, 0.1); padding: 8px 20px; border-radius: 100px; border: 1px solid rgba(252, 211, 77, 0.2); }
         
         .btn-group { display: flex; flex-direction: column; gap: 15px; align-items: center; margin: 20px 0; }
-        .btn-download { display: inline-flex; align-items: center; justify-content: center; background: var(--primary); color: white; font-size: 1.2rem; font-weight: 700; padding: 18px 40px; border-radius: 100px; text-decoration: none; transition: 0.3s; width: 100%; max-width: 350px; box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3); }
+        .btn-download { display: inline-flex; align-items: center; justify-content: center; background: var(--primary); color: white; font-size: 1.2rem; font-weight: 700; padding: 18px 40px; border-radius: 100px; text-decoration: none; transition: 0.3s; width: 100%; max-width: 350px; box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3); cursor: pointer; border: none; }
         .btn-download:hover { background: var(--primary-hover); transform: translateY(-3px); box-shadow: 0 15px 30px rgba(59, 130, 246, 0.4); }
         
         .btn-github { display: inline-flex; align-items: center; justify-content: center; background: #24292e; color: white; font-size: 1.1rem; font-weight: 600; padding: 14px 40px; border-radius: 100px; text-decoration: none; transition: 0.3s; width: 100%; max-width: 350px; border: 1px solid rgba(255,255,255,0.1); }
@@ -161,8 +166,13 @@
         </div>
 
         <div class="download-box">
+            
+            <div class="live-counter" id="downloadCountDisplay">
+                🔥 Downloads: Loading...
+            </div>
+
             <div class="btn-group">
-                <a href="https://github.com/AryanMewada/Resources/raw/main/Any_Screen_Recorder_Setup_v1.0.exe" class="btn-download">
+                <a href="https://github.com/AryanMewada/Resources/raw/main/Any_Screen_Recorder_Setup_v1.0.exe" class="btn-download" onclick="incrementDownload()">
                     Download Free For PC
                 </a>
                 <a href="https://github.com/AryanMewada" target="_blank" class="btn-github">
@@ -276,8 +286,8 @@
                 This <strong>no watermark screen recorder</strong> is completely free with absolutely zero time limits. Whether you want to capture 60FPS gameplay for YouTube, record online classes, or create software tutorials with dynamic mouse tracking and click highlights, this software handles it all flawlessly. It guarantees <strong>crystal clear internal audio</strong> recording using the Windows WASAPI engine. The software is optimized specifically for systems with 2GB or 4GB RAM running Windows 10 or Windows 11. Download Any Screen Recorder today to experience true zero-lag, high-quality 1080p and 720p screen capture without slowing down your computer.
             </p>
         </div>
-
-        <div class="content-section" style="text-align: center; background: rgba(59, 130, 246, 0.05); border-color: rgba(59, 130, 246, 0.2); padding: 35px; margin-bottom: 20px;">
+		
+		<div class="content-section" style="text-align: center; background: rgba(59, 130, 246, 0.05); border-color: rgba(59, 130, 246, 0.2); padding: 35px; margin-bottom: 20px;">
             <h3 style="border: none; padding: 0; display: inline-block; margin-bottom: 15px;">📖 Read Our Latest Guide</h3>
             <p style="margin-bottom: 20px;">Struggling with game lag on a low-end PC? Check out our complete 2026 guide on smooth recording.</p>
             <a href="blog-60fps-recording.html" style="display: inline-block; background: #3b82f6; color: white; padding: 12px 30px; border-radius: 100px; text-decoration: none; font-weight: 700; font-size: 1.05rem; box-shadow: 0 4px 15px rgba(59,130,246,0.3); transition: 0.3s;">How to Record 60FPS Gameplay Without Lag</a>
@@ -299,6 +309,65 @@
     <footer>
         <span style="color: #475569; font-size: 0.85rem;">© 2026 Aryan Mewada Studios. All rights reserved.</span>
     </footer>
+
+    <script>
+        // Supabase Initialization using the provided keys
+        const supabaseUrl = 'https://popqfjpredtwzteenrz.supabase.co';
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBvcHFmanByZWR0d3R6ZWVubnJ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMyNDU2MDEsImV4cCI6MjA4ODgyMTYwMX0.EEdp_Qr4YsTSNp9zeN5NmWIyRmZBaJ1UNzle48DbmcA';
+        const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+        
+        // Exact App Name matching the database table
+        const appName = 'Any Screen Recorder';
+
+        // Fetch Initial Download Count
+        async function fetchDownloadCount() {
+            try {
+                const { data, error } = await supabase
+                    .from('downloads')
+                    .select('download_count')
+                    .eq('app_name', appName)
+                    .single();
+                
+                if (data) {
+                    document.getElementById('downloadCountDisplay').innerText = `🔥 Total Downloads: ${data.download_count}`;
+                } else if (error) {
+                    console.error("Error fetching count:", error);
+                    document.getElementById('downloadCountDisplay').innerText = `🔥 Total Downloads: 0`;
+                }
+            } catch (err) {
+                console.error("Network error:", err);
+            }
+        }
+
+        // Increment Download Count on Click
+        async function incrementDownload() {
+            try {
+                // Fetch the latest count first
+                const { data, error } = await supabase
+                    .from('downloads')
+                    .select('download_count')
+                    .eq('app_name', appName)
+                    .single();
+                
+                if (data) {
+                    const newCount = data.download_count + 1;
+                    
+                    // Update database
+                    await supabase
+                        .from('downloads')
+                        .update({ download_count: newCount })
+                        .eq('app_name', appName);
+                    
+                    // Update UI immediately
+                    document.getElementById('downloadCountDisplay').innerText = `🔥 Total Downloads: ${newCount}`;
+                }
+            } catch (err) {
+                console.error("Error updating count:", err);
+            }
+        }
+
+        // Run fetch on page load
+        fetchDownloadCount();
+    </script>
 </body>
 </html>
-
