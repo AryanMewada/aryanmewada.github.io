@@ -18,6 +18,8 @@
     <link rel="icon" type="image/png" href="logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
 
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1032421976701438"
      crossorigin="anonymous"></script>
 
@@ -96,6 +98,9 @@
 
         footer { border-top: 1px solid rgba(255, 255, 255, 0.05); padding: 40px 20px; text-align: center; margin-top: auto; background: #080c17; }
 
+        /* Counter Styling */
+        .live-counter { font-size: 1.1rem; font-weight: 700; color: #fcd34d; margin-bottom: 15px; display: inline-flex; align-items: center; gap: 8px; background: rgba(252, 211, 77, 0.1); padding: 8px 20px; border-radius: 100px; border: 1px solid rgba(252, 211, 77, 0.2); }
+
         @media (max-width: 768px) {
             nav { flex-direction: column; padding: 15px; gap: 15px; }
             .nav-links { width: 100%; justify-content: center; flex-wrap: wrap; }
@@ -141,8 +146,12 @@
         <div class="download-box">
             <h3>Get The Engine</h3>
             
+            <div style="margin: 15px auto;">
+                <div class="live-counter" id="downloadCountDisplay">🔥 Downloads: Loading...</div>
+            </div>
+
             <div class="btn-group">
-                <a href="https://github.com/AryanMewada/Resources/raw/main/AnyWebWall_Setup_v1.0.exe" class="btn-download">
+                <a href="https://github.com/AryanMewada/Resources/raw/main/AnyWebWall_Setup_v1.0.exe" target="_blank" class="btn-download" onclick="incrementDownload(event)">
                     Download AnyWebWall
                 </a>
                 <a href="https://github.com/AryanMewada" target="_blank" class="btn-github">
@@ -204,6 +213,55 @@
     <footer>
         <span style="color: #475569; font-size: 0.85rem;">© 2026 Aryan Mewada Studios. All rights reserved.</span>
     </footer>
+
+    <script>
+        const appName = 'AnyWebWall';
+        const countDisplay = document.getElementById('downloadCountDisplay');
+        const vercelApiUrl = 'https://bsr-backend-server.vercel.app/api/increment?app=' + encodeURIComponent(appName);
+
+        if (window.supabase) {
+            const supabaseUrl = 'https://popqfjpredtwtzeennrz.supabase.co'; 
+            const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBvcHFmanByZWR0d3R6ZWVubnJ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMyNDU2MDEsImV4cCI6MjA4ODgyMTYwMX0.EEdp_Qr4YsTSNp9zeN5NmWIyRmZBaJ1UNzle48DbmcA';
+            const supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
+            
+            async function fetchDownloadCount() {
+                try {
+                    const { data, error } = await supabaseClient
+                        .from('downloads')
+                        .select('download_count')
+                        .eq('app_name', appName)
+                        .single();
+                    
+                    if (data) {
+                        countDisplay.innerText = `🔥 Total Downloads: ${data.download_count}`;
+                    } else {
+                        countDisplay.innerText = "🔥 Total Downloads: 0"; 
+                    }
+                } catch (err) {
+                    console.error("Fetch Error:", err);
+                }
+            }
+            fetchDownloadCount();
+        }
+
+        async function incrementDownload(event) {
+            countDisplay.innerText = "🔥 Updating...";
+
+            try {
+                const response = await fetch(vercelApiUrl);
+                const result = await response.json();
+
+                if (result.success) {
+                    countDisplay.innerText = `🔥 Total Downloads: ${result.newCount}`;
+                } else {
+                    countDisplay.innerText = "🔥 Update Error: " + (result.error || "Failed");
+                    console.error("Backend Error:", result);
+                }
+            } catch (err) {
+                countDisplay.innerText = "🔥 Network Error";
+                console.error("Fetch failed:", err);
+            }
+        }
+    </script>
 </body>
 </html>
-
