@@ -3,10 +3,24 @@
   
   <url>
     <loc>https://aryanmewada.github.io/</loc>
-    <lastmod>2026-03-15</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <url>
+    <loc>https://aryanmewada.github.io/Ai-Tools.html</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://aryanmewada.github.io/ai-voice.html</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
   <url>
     <loc>https://aryanmewada.github.io/AnyVidWall.html</loc>
     <lastmod>2026-03-15</lastmod>
@@ -50,7 +64,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
-
   <url>
     <loc>https://aryanmewada.github.io/blog-60fps-recording.html</loc>
     <lastmod>2026-03-08</lastmod>
